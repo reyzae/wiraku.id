@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wiraku.id - Produk Digital Terpercaya</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    /* Kompas */
+    .top-compass {
+      font-size: 24px;
+      width: 50px;
+      height: 50px;
+      background: #111827;
+      color: #ffe600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      animation: rotate-compass 4s linear infinite;
+      transition: transform 0.2s ease;
+    }
+
+    .top-compass.active {
+      animation: none;
+    }
+
+    @keyframes rotate-compass {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .top-dropdown {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      flex-direction: column;
+      background: #1f2937;
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      min-width: 140px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+      display: none;
+    }
+
+    .top-dropdown.show {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .top-dropdown a {
+      color: #fff;
+      padding: 8px 12px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    .top-dropdown a:hover {
+      color: #ffe600;
+    }
+
+    /* Toggle Dark Mode */
+    .top-dark-toggle {
+      width: 50px;
+      height: 50px;
+      background: #111827;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      top: 15px;
+      right: 75px;
+      z-index: 999;
+    }
+
+    #moon-icon {
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+
+    body:not(.dark-mode) #moon-icon {
+      color: #000;
+    }
+
+    body.dark-mode #moon-icon {
+      color: #fff;
+    }
+
+    /* Warna dark mode */
+    body.dark-mode {
+      background: #111827;
+      color: #f3f4f6;
+    }
+
+    body.dark-mode .hero {
+      background: linear-gradient(165deg, #0f172a, #1e3a8a);
+    }
+
+    body.dark-mode .footer {
+      background: #000;
+    }
+
+    body.dark-mode .kategori-card {
+      background: #1f2937;
+      color: #f3f4f6;
+      border-color: #334155;
+    }
+
+    .top-menu-wrapper {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">Wiraku.id</div>
+      <div class="nav-links" id="nav-links">
+        <a href="/index.html">Beranda</a>
+        <a href="/produk/lainnya.html">Lainnya</a>
+        <a href="/panduan/cara-pakai.html">Panduan</a>
+        <a href="/tentang/tentang.html">Tentang</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Selamat Datang di <span class="highlight">Wiraku.id</span></h1>
+    <p>Jual produk digital seperti akun streaming, voucher game, dan langganan aplikasi.</p>
+    <a href="#kategori" class="btn-utama" id="lihat-produk">Lihat Produk</a>
+  </header>
+
+  <!-- Kategori Produk -->
+  <section id="kategori" class="kategori-section">
+    <h2>Kategori Produk</h2>
+    <div class="kategori-grid">
+      <a href="produk/streaming.html" class="kategori-card">🎬 <span>Streaming Online</span></a>
+      <a href="produk/game.html" class="kategori-card">🎮 <span>Voucher Game</span></a>
+      <a href="produk/apps.html" class="kategori-card">🧩 <span>Aplikasi Premium</span></a>
+      <a href="produk/lainnya.html" class="kategori-card">📦 <span>Lainnya</span></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Wiraku.id | Produk digital aman & terpercaya</p>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <div class="wa-float">
+    <a href="https://wa.me/6285121010199?text=Halo%20saya%20mau%20order%20produk%20digitalnya%2C%20saya%20mau%20..."
+       target="_blank" class="wa-button" title="Order Sekarang">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="Order Sekarang" />
+      <span class="wa-tooltip">Order Sekarang</span>
+    </a>
+  </div>
+
+  <!-- Floating Compass Menu + Dark Mode -->
+  <div class="top-menu-wrapper">
+    <div class="top-compass" id="top-compass">🧭</div>
+    <div class="top-dark-toggle" id="toggle-dark" title="Toggle Dark Mode">
+      <span id="moon-icon">🌙</span>
+    </div>
+    <div class="top-dropdown" id="top-dropdown">
+      <a href="/index.html">Beranda</a>
+      <a href="/produk/lainnya.html">Lainnya</a>
+      <a href="/panduan/cara-pakai.html">Panduan</a>
+      <a href="/tentang/tentang.html">Tentang</a>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const compass = document.getElementById('top-compass');
+      const dropdown = document.getElementById('top-dropdown');
+      const darkToggle = document.getElementById('toggle-dark');
+
+      // Toggle menu
+      if (compass && dropdown) {
+        compass.addEventListener('click', () => {
+          dropdown.classList.toggle('show');
+          compass.classList.toggle('active');
+        });
+
+        window.addEventListener('click', (e) => {
+          if (!compass.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.remove('show');
+            compass.classList.remove('active');
+          }
+        });
+
+        dropdown.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            dropdown.classList.remove('show');
+            compass.classList.remove('active');
+          });
+        });
+      }
+
+      // Toggle dark mode
+      if (darkToggle) {
+        darkToggle.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode');
+        });
+      }
+
+      // Scroll ke Produk
+      const scrollBtn = document.getElementById('lihat-produk');
+      const target = document.getElementById('kategori');
+      if (scrollBtn && target) {
+        scrollBtn.addEventListener('click', e => {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

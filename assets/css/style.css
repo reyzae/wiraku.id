@@ -1,0 +1,623 @@
+/* ========== RESET & DASAR ========== */
+* {
+  transition: background 0.4s ease, color 0.4s ease, border-color 0.3s ease, filter 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+  transition: background 0.5s ease-in-out, color 0.3s ease;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  background: #111827;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  color: #F3F4F6;
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #38BDF8;
+  border-bottom: 2px solid #38BDF8;
+}
+
+.nav-brand {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffe600;
+  margin-left: 20px;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* ========== HERO ========== */
+.hero {
+  background: linear-gradient(165deg, #1e3a8a, #0f172a);
+  color: white;
+  padding: 70px 20px 50px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #ffe600;
+}
+
+.btn-utama {
+  background: #ffe600;
+  color: #333;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* ========== KATEGORI ========== */
+.kategori-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.kategori-section h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.kategori-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.kategori-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 25px 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kategori-card span {
+  display: block;
+  margin-top: 8px;
+  color: #005eff;
+}
+
+.kategori-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== CTA WhatsApp ========== */
+.cta-wa,
+.cta-wa-unik {
+  background: #e3f9e5;
+  padding: 30px;
+  text-align: center;
+}
+
+.cta-box {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-left: 6px solid #25d366;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cta-box img {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-wa,
+.btn-wa-unik {
+  background: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-wa-unik:hover {
+  background: #1da851;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: #1e2a38;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* ========== WHATSAPP FLOAT ========== */
+.wa-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+}
+
+.wa-button {
+  position: relative;
+  display: inline-block;
+}
+
+.wa-button img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.wa-button:hover img {
+  transform: scale(1.05);
+}
+
+.wa-tooltip {
+  position: absolute;
+  bottom: 75px;
+  right: 0;
+  background: #25d366;
+  color: white;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.wa-button:hover .wa-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== MOBILE MENU ========== */
+.mobile-menu-trigger {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #111827;
+  color: #ffe600;
+  font-size: 26px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-trigger:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  background: #1f2937;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  z-index: 998;
+  animation: slideUp 0.3s ease-out;
+}
+
+.mobile-menu a {
+  color: white;
+  margin: 8px 0;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-trigger { display: block; }
+  .navbar .nav-links { display: none !important; }
+}
+
+/* ========== FLOATING COMPASS & DROPDOWN ========== */
+.top-menu-wrapper {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 999;
+}
+
+.top-compass {
+  width: 50px;
+  height: 50px;
+  background: #111827;
+  border-radius: 50%;
+  color: #ffe600;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: rotate-compass 4s linear infinite;
+  transition: transform 0.2s ease;
+}
+
+.top-compass.active {
+  animation: none;
+}
+
+@keyframes rotate-compass {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.top-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  flex-direction: column;
+  background: #1f2937;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  pointer-events: none;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.top-dropdown.show {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.top-dropdown a {
+  color: #fff;
+  padding: 8px 12px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.top-dropdown a:hover {
+  color: #ffe600;
+}
+
+/* ========== DARK MODE ========= */
+
+body.dark-mode {
+  background: #0f172a;
+  color: #f3f4f6;
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+  background: #0c1a2b;
+}
+
+body.dark-mode .navbar a {
+  color: #e5e7eb;
+}
+
+body.dark-mode .navbar a:hover {
+  color: #38bdf8;
+  border-color: #38bdf8;
+}
+
+/* Hero */
+body.dark-mode .hero {
+  background: linear-gradient(165deg, #0f172a, #1e3a8a);
+  color: #f3f4f6;
+}
+
+/* Tombol utama */
+/* === DARK MODE: Tombol Utama === */
+body.dark-mode .btn-utama {
+  background: #000000;         /* hitam total */
+  color: #ffffff;              /* teks putih */
+  border: 2px solid #ffffff;
+}
+
+/* === DARK MODE: Section Kategori === */
+body.dark-mode .kategori-section {
+  background-color: #000000;
+}
+
+body.dark-mode .kategori-section h2 {
+  color: #ffffff;
+}
+
+/* Kartu Produk */
+body.dark-mode .kategori-card {
+  background: #111827;         /* dark navy */
+  color: #ffffff;              /* default text */
+  border-color: #1f2937;       /* border gelap */
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05); /* soft white shadow */
+}
+
+/* Teks Judul Produk */
+body.dark-mode .kategori-card span {
+  color: #ffffff;              /* biru terang */
+}
+
+
+
+
+/* Footer */
+body.dark-mode .footer {
+  background: #0c1a2b;
+  color: #cbd5e1;
+}
+
+/* WhatsApp CTA */
+body.dark-mode .cta-wa,
+body.dark-mode .cta-wa-unik {
+  background: #1e293b;
+  color: #f3f4f6;
+}
+
+body.dark-mode .cta-box {
+  background: #0f172a;
+  border-left: 6px solid #25d366;
+  color: #f3f4f6;
+}
+
+body.dark-mode .btn-wa,
+body.dark-mode .btn-wa-unik {
+  background: #25d366;
+  color: white;
+}
+
+body.dark-mode .btn-wa-unik:hover {
+  background: #1da851;
+}
+
+/* WA Button */
+body.dark-mode .wa-button img {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown Menu */
+body.dark-mode .top-dropdown {
+  background: #0f172a;
+  color: #f3f4f6;
+}
+
+body.dark-mode .top-dropdown a {
+  color: #e5e7eb;
+}
+
+body.dark-mode .top-dropdown a:hover {
+  color: #ffe600;
+}
+
+/* Moon Icon */
+body:not(.dark-mode) #moon-icon {
+  color: #000;
+}
+
+body.dark-mode #moon-icon {
+  color: #fff;
+}
+
+/* DARK MODE FINAL */
+body.dark-mode {
+  background: #0b1120;
+  color: #e2e8f0;
+}
+
+body.dark-mode .navbar {
+  background: #090f1d;
+}
+
+body.dark-mode .hero {
+  background: linear-gradient(160deg, #0f172a, #1a2238);
+  color: #e2e8f0;
+}
+
+body.dark-mode .kategori-section {
+  background: #0e1729;
+}
+
+body.dark-mode .kategori-section h2 {
+  color: #e2e8f0;
+}
+
+body.dark-mode .kategori-card {
+  background: #1a2238;
+  color: #e2e8f0;
+  border-color: #2d3748;
+}
+
+body.dark-mode .kategori-card span {
+  color: #ffffff;
+}
+
+body.dark-mode .btn-utama {
+  background: #facc15;
+  color: #111827;
+}
+
+body.dark-mode .cta-wa,
+body.dark-mode .cta-wa-unik {
+  background: #1a2238;
+  color: #e2e8f0;
+}
+
+body.dark-mode .cta-box {
+  background: #0b1120;
+  border-left: 6px solid #25d366;
+  color: #e2e8f0;
+}
+
+body.dark-mode .footer {
+  background: #0c1a2b;
+  color: #cbd5e1;
+}
+
+body.dark-mode .top-dropdown {
+  background: #1a2238;
+}
+
+body.dark-mode .top-dropdown a {
+  color: #f1f5f9;
+}
+
+
+/* ================= DARK MODE CUSTOM ================= */
+
+body.dark-mode {
+  background: #000;
+  color: #fff;
+}
+
+/* NAVBAR */
+body.dark-mode .navbar {
+  background: #000;
+}
+
+body.dark-mode .nav-brand {
+  color: #fff; /* Wiraku.id jadi putih */
+}
+
+body.dark-mode .navbar a {
+  color: #e5e5e5;
+}
+
+body.dark-mode .navbar a:hover {
+  color: #ffe600;
+  border-bottom: 2px solid #ffe600;
+}
+
+/* HERO */
+body.dark-mode .hero {
+  background: #000;
+  color: #fff;
+}
+
+body.dark-mode .hero .highlight {
+  color: #fff; /* Wiraku.id (span) putih */
+}
+
+body.dark-mode .btn-utama {
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+/* KATEGORI */
+body.dark-mode .kategori-section {
+  background: #000;
+}
+
+body.dark-mode .kategori-section h2 {
+  color: #fff;
+}
+
+body.dark-mode .kategori-card {
+  background: #111;
+  color: #fff;
+  border-color: #222;
+}
+
+body.dark-mode .kategori-card span {
+  color: #ffffff;
+}
+
+/* DROPDOWN & COMPASS */
+body.dark-mode .top-dropdown {
+  background: #111;
+}
+
+body.dark-mode .top-dropdown a {
+  color: #eee;
+}
+
+body.dark-mode .top-dropdown a:hover {
+  color: #ffe600;
+}
+
+/* FOOTER */
+body.dark-mode .footer {
+  background: #000;
+  color: #999;
+}
+
+/* ICON BULAN & KOMPAS */
+body.dark-mode #moon-icon,
+body.dark-mode .top-compass {
+  filter: invert(1); /* Membalik warna emoji/icon agar putih */
+}

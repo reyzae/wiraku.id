@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Konfirmasi Pembayaran - Wiraku.id</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Konfirmasi Pembayaran</h1>
+    <p>Isi formulir di bawah dan unggah bukti transfer kamu.</p>
+  </header>
+
+  <main class="form-container">
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="nama">Nama Pemesan</label>
+      <input type="text" id="nama" name="nama" required />
+
+      <label for="produk">Nama Produk</label>
+      <input type="text" id="produk" name="produk" required />
+
+      <label for="bank">Bank Tujuan</label>
+      <select id="bank" name="bank" required>
+        <option value="">-- Pilih Bank --</option>
+        <option value="BCA">BCA</option>
+        <option value="BNI">BNI</option>
+        <option value="Mandiri">Mandiri</option>
+        <option value="BRI">BRI</option>
+      </select>
+
+      <label for="bukti">Upload Bukti Transfer</label>
+      <input type="file" id="bukti" name="bukti" accept="image/*" required />
+
+      <button type="submit" class="btn-utama">Kirim Konfirmasi</button>
+    </form>
+  </main>
+</body>
+</html>
