@@ -4,25 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wiraku.id - Produk Digital Terpercaya</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" href="favicon.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
-  <script defer src="assets/js/main.js"></script>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-brand">Wiraku.id</div>
-      <div class="nav-links" id="nav-links">
-        <a href="/index.html">Beranda</a>
-        <a href="/produk/lainnya.html">Lainnya</a>
-        <a href="/panduan/cara-pakai.html">Panduan</a>
-        <a href="/tentang/tentang.html">Tentang</a>
+  <div class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">Wiraku.id</div>
+
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#">Beranda</a>
+        <a href="#kategori">Lainnya</a>
+        <a href="#">Panduan</a>
+        <a href="#">Tentang</a>
+      </div>
+
+      <!-- Toggle Dark Mode -->
+      <div class="top-dark-toggle toggle-dark">
+        <span id="moon-icon">🌙</span>
       </div>
     </div>
-  </nav>
+  </div>
+</div>
+
 
   <!-- Hero Section -->
   <header class="hero">
@@ -56,12 +64,9 @@
     </a>
   </div>
 
-  <!-- Floating Compass Menu + Dark Mode -->
-  <div class="top-menu-wrapper">
+  <!-- Floating Compass Menu (Mobile Only) -->
+  <div class="top-menu-wrapper" id="top-menu-wrapper">
     <div class="top-compass" id="top-compass">🧭</div>
-    <div class="top-dark-toggle" id="toggle-dark" title="Toggle Dark Mode">
-      <span id="moon-icon">🌙</span>
-    </div>
     <div class="top-dropdown" id="top-dropdown">
       <a href="/index.html">Beranda</a>
       <a href="/produk/lainnya.html">Lainnya</a>
@@ -69,6 +74,23 @@
       <a href="/tentang/tentang.html">Tentang</a>
     </div>
   </div>
+
+  <script src="assets/js/main.js"></script>
+
+  <!-- Floating Top Right Menu (Mobile Only) -->
+<div class="top-menu-wrapper" id="top-menu-wrapper">
+  <div class="top-dark-toggle" id="toggle-dark">
+    <span id="moon-icon">🌙</span>
+  </div>
+  <div class="top-compass" id="top-compass">🧭</div>
+  <div class="top-dropdown" id="top-dropdown">
+    <a href="#">Beranda</a>
+    <a href="#">Lainnya</a>
+    <a href="#">Panduan</a>
+    <a href="#">Tentang</a>
+  </div>
+</div>
+
 
 </body>
 </html>

@@ -9,13 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== Toggle Dark Mode =====
-  const darkToggle = document.getElementById('toggle-dark');
-  if (darkToggle) {
-    darkToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-  }
+// ===== Toggle Dark Mode (Multi Element) =====
+document.querySelectorAll('.toggle-dark').forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+});
 
   // ===== Floating Compass Menu (Top Right) =====
   const compass = document.getElementById('top-compass');

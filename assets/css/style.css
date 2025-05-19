@@ -23,6 +23,19 @@ img {
   display: block;
 }
 
+/* Tambahan: Sembunyikan kompas di desktop */
+@media (min-width: 769px) {
+  #top-menu-wrapper {
+    display: none !important;
+  }
+
+  .top-dark-toggle {
+    position: relative;
+    top: unset;
+    right: unset;
+  }
+}
+
 /* ========== NAVBAR ========== */
 .navbar {
   background: #111827;
@@ -63,6 +76,18 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+}
+
+/* Tambahan: Grup kanan navbar */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
 }
 
 /* ========== HERO ========== */
@@ -691,8 +716,8 @@ body.dark-mode .top-compass {
 
 /* ===== Toggle Dark Mode Button ===== */
 .top-dark-toggle {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: #111827;
   border-radius: 50%;
   display: flex;
@@ -700,14 +725,10 @@ body.dark-mode .top-compass {
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  position: fixed;
-  top: 15px;
-  right: 75px;
-  z-index: 999;
 }
 
 #moon-icon {
-  font-size: 24px;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 
@@ -717,4 +738,58 @@ body:not(.dark-mode) #moon-icon {
 
 body.dark-mode #moon-icon {
   color: #fff;
+}
+
+/* --- Responsive Top Menu (Mobile Only) --- */
+.top-menu-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 999;
+}
+
+.top-compass,
+.top-dark-toggle {
+  width: 50px;
+  height: 50px;
+  background: #111827;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.top-compass {
+  font-size: 24px;
+  color: #ffe600;
+  animation: rotate-compass 4s linear infinite;
+  transition: transform 0.2s ease;
+}
+
+.top-compass.active {
+  animation: none;
+}
+
+.top-dark-toggle #moon-icon {
+  font-size: 24px;
+  color: #ffe600;
+}
+
+/* Sembunyikan top menu di desktop */
+@media (min-width: 769px) {
+  #top-menu-wrapper {
+    display: none !important;
+  }
+}
+
+/* Sembunyikan navbar-right dark toggle di mobile */
+@media (max-width: 768px) {
+  .nav-right {
+    display: none !important;
+  }
 }
