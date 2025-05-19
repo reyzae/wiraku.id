@@ -1,0 +1,31 @@
+CARA PUSH SALAH SATU FOLDER SAJA KE GITHUB
+
+1. Inisialisasi Git (jika belum)
+----------------------------------------
+> git init
+
+2. Tambahkan hanya folder tertentu
+----------------------------------------
+> git add nama_folder/
+
+Contoh:
+> git add landingpage/
+
+3. Commit perubahan
+----------------------------------------
+> git commit -m "Push folder landingpage saja"
+
+4. Hubungkan ke GitHub (jika belum)
+----------------------------------------
+> git remote add origin https://github.com/USERNAME/repo.git
+
+*Ganti USERNAME dan repo sesuai akun GitHub dan nama repositori*
+
+5. Push ke GitHub
+----------------------------------------
+> git push -u origin main
+
+Catatan:
+- Gunakan `git status` untuk mengecek isi folder yang dipilih.
+- Kamu bisa juga add beberapa folder sekaligus:
+  > git add folder1/ folder2/

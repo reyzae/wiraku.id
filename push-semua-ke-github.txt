@@ -1,0 +1,28 @@
+CARA PUSH SEMUA FILE DARI VSCODE KE GITHUB
+
+1. Inisialisasi Git (jika belum)
+----------------------------------------
+> git init
+
+2. Tambahkan semua file
+----------------------------------------
+> git add .
+
+3. Commit perubahan
+----------------------------------------
+> git commit -m "Push semua file"
+
+4. Hubungkan ke GitHub (jika belum)
+----------------------------------------
+> git remote add origin https://github.com/USERNAME/repo.git
+
+*Ganti USERNAME dan repo sesuai akun GitHub dan nama repositori*
+
+5. Push ke GitHub
+----------------------------------------
+> git push -u origin main
+
+Catatan:
+- Gunakan `git status` untuk mengecek file yang akan dipush.
+- Jika error saat push pertama kali, coba:
+  > git push origin main --force
