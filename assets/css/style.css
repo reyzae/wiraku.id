@@ -575,12 +575,12 @@ body.dark-mode .hero .highlight {
 body.dark-mode .btn-utama {
   background: #1e293b;
   color: #fff;
-  border: 2px solid #ffe600;
+  border: 2px solid #ffffff;
 }
 
 body.dark-mode .btn-utama:hover {
   background: #334155;
-  color: #ffe600;
+  color: #ffffff;
 }
 
 /* KATEGORI */
