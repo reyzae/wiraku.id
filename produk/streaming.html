@@ -4,22 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Streaming Online - Wiraku.id</title>
+  <link rel="icon" href="../favicon.png" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">Wiraku.id</div>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html">Beranda</a>
+          <a href="lainnya.html">Lainnya</a>
+          <a href="../panduan/cara-pakai.html">Panduan</a>
+          <a href="../tentang/tentang.html">Tentang</a>
+        </div>
+        <div class="top-dark-toggle toggle-dark" id="toggle-dark">
+          <span id="moon-icon">🌙</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <header class="sub-hero">
+  <!-- Hero Section -->
+  <header class="hero">
     <h1>🎬 Streaming Online</h1>
-    <p>Akun & voucher layanan streaming premium terpercaya</p>
+    <p>Pilih akun streaming premium terbaik, aman dan bergaransi</p>
   </header>
 
-  <section class="produk-list" id="produkStreaming">
-    <!-- Produk akan dimuat otomatis dari JSON -->
+  <!-- Produk Section -->
+  <section class="kategori-section">
+    <div class="kategori-grid" id="produkStreaming">
+      <!-- Produk dari streaming.json akan dirender di sini -->
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Wiraku.id - Streaming Online</p>
+    <p>&copy; 2025 Wiraku.id | Produk digital aman & terpercaya</p>
   </footer>
+
+  <!-- WA Float -->
+  <div class="wa-float">
+    <a href="https://wa.me/6285121010199?text=Halo%20saya%20mau%20order%20akun%20streaming" target="_blank" class="wa-button" title="Order Streaming">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="Order Sekarang" />
+      <span class="wa-tooltip">Order Sekarang</span>
+    </a>
+  </div>
+
+  <!-- Compass + Toggle Mobile -->
+  <div class="top-menu-wrapper" id="top-menu-wrapper">
+    <div class="top-dark-toggle toggle-dark">
+      <span id="moon-icon">🌙</span>
+    </div>
+    <div class="top-compass" id="top-compass">🧭</div>
+    <div class="top-dropdown" id="top-dropdown">
+      <a href="../index.html">Beranda</a>
+      <a href="lainnya.html">Lainnya</a>
+      <a href="../panduan/cara-pakai.html">Panduan</a>
+      <a href="../tentang/tentang.html">Tentang</a>
+    </div>
+  </div>
 
   <script src="../assets/js/main.js"></script>
 </body>

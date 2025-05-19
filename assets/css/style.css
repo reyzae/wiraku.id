@@ -315,27 +315,27 @@ img {
   position: fixed;
   top: 15px;
   right: 15px;
-  z-index: 999;
-}
-
-.top-compass {
-  width: 50px;
-  height: 50px;
-  background: #111827;
-  border-radius: 50%;
-  color: #ffe600;
-  font-size: 24px;
+  z-index: 9999; /* naikkan agar selalu di atas */
   display: flex;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  animation: rotate-compass 4s linear infinite;
-  transition: transform 0.2s ease;
+  gap: 10px;
+  pointer-events: auto; /* penting */
+}
+
+.top-compass,
+.top-dark-toggle {
+  z-index: 9999; /* pastikan keduanya di atas */
+  pointer-events: auto;
 }
 
 .top-compass.active {
   animation: none;
+}
+
+@media (min-width: 769px) {
+  #top-menu-wrapper {
+    display: none !important;
+  }
 }
 
 @keyframes rotate-compass {

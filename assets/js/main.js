@@ -9,24 +9,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-// ===== Toggle Dark Mode (Multi Element) =====
-document.querySelectorAll('.toggle-dark').forEach(toggle => {
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+  // ===== Toggle Dark Mode (Mobile & Desktop) =====
+  const darkToggles = document.querySelectorAll('.toggle-dark');
+  darkToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
   });
-});
 
-  // ===== Floating Compass Menu (Top Right) =====
+  // ===== Floating Compass Menu (Mobile Only) =====
   const compass = document.getElementById('top-compass');
   const dropdown = document.getElementById('top-dropdown');
+
   if (compass && dropdown) {
-    compass.addEventListener('click', e => {
+    compass.addEventListener('click', (e) => {
       e.stopPropagation();
       dropdown.classList.toggle('show');
       compass.classList.toggle('active');
     });
 
-    document.addEventListener('click', e => {
+    document.addEventListener('click', (e) => {
       if (!dropdown.contains(e.target) && !compass.contains(e.target)) {
         dropdown.classList.remove('show');
         compass.classList.remove('active');
@@ -41,7 +43,7 @@ document.querySelectorAll('.toggle-dark').forEach(toggle => {
     });
   }
 
-  // ===== Render Produk Dinamis =====
+  // ===== Render Produk Dinamis dari JSON =====
   function renderProduk(id, url) {
     const container = document.getElementById(id);
     if (!container) return;
@@ -67,7 +69,7 @@ document.querySelectorAll('.toggle-dark').forEach(toggle => {
   renderProduk('produkApps', 'data/apps.json');
   renderProduk('produk-lainnya', '/produk/lainnya.json');
 
-  // ===== Mobile Floating Menu =====
+  // ===== Mobile Floating Menu Trigger (jika ada) =====
   const trigger = document.getElementById('menu-trigger');
   const mobileMenu = document.getElementById('mobile-menu');
   if (trigger && mobileMenu) {
