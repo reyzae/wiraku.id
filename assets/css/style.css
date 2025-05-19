@@ -540,8 +540,8 @@ body.dark-mode .top-dropdown a {
 /* ================= DARK MODE CUSTOM ================= */
 
 body.dark-mode {
-  background: #000;
-  color: #fff;
+  background: #0f172a;
+  color: #e2e8f0;
 }
 
 /* NAVBAR */
@@ -564,8 +564,8 @@ body.dark-mode .navbar a:hover {
 
 /* HERO */
 body.dark-mode .hero {
-  background: #000;
-  color: #fff;
+  background: linear-gradient(160deg, #0f172a, #1e3a8a);
+  color: #e2e8f0;
 }
 
 body.dark-mode .hero .highlight {
@@ -573,28 +573,30 @@ body.dark-mode .hero .highlight {
 }
 
 body.dark-mode .btn-utama {
-  background: #000;
+  background: #1e293b;
   color: #fff;
-  border: 2px solid #fff;
+  border: 2px solid #ffe600;
+}
+
+body.dark-mode .btn-utama:hover {
+  background: #334155;
+  color: #ffe600;
 }
 
 /* KATEGORI */
 body.dark-mode .kategori-section {
-  background: #000;
-}
-
-body.dark-mode .kategori-section h2 {
-  color: #fff;
+  background: #111827;
 }
 
 body.dark-mode .kategori-card {
-  background: #111;
-  color: #fff;
-  border-color: #222;
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 body.dark-mode .kategori-card span {
-  color: #ffffff;
+  color: #93c5fd;
 }
 
 /* DROPDOWN & COMPASS */
@@ -612,12 +614,107 @@ body.dark-mode .top-dropdown a:hover {
 
 /* FOOTER */
 body.dark-mode .footer {
-  background: #000;
-  color: #999;
+  background: #0f172a;
+  color: #94a3b8;
 }
 
 /* ICON BULAN & KOMPAS */
 body.dark-mode #moon-icon,
 body.dark-mode .top-compass {
   filter: invert(1); /* Membalik warna emoji/icon agar putih */
+}
+
+
+/* ===== Compass Floating Style (dipindah dari index.html) ===== */
+.top-compass {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  background: #111827;
+  color: #ffe600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  animation: rotate-compass 4s linear infinite;
+  transition: transform 0.2s ease;
+}
+
+.top-compass.active {
+  animation: none;
+}
+
+@keyframes rotate-compass {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.top-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  flex-direction: column;
+  background: #1f2937;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  display: none;
+}
+
+.top-dropdown.show {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.top-dropdown a {
+  color: #fff;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.top-dropdown a:hover {
+  color: #ffe600;
+}
+
+/* ===== Toggle Dark Mode Button ===== */
+.top-dark-toggle {
+  width: 50px;
+  height: 50px;
+  background: #111827;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 15px;
+  right: 75px;
+  z-index: 999;
+}
+
+#moon-icon {
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+body:not(.dark-mode) #moon-icon {
+  color: #000;
+}
+
+body.dark-mode #moon-icon {
+  color: #fff;
 }
