@@ -1,0 +1,77 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.invoice-form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.invoice-form label {
+  font-weight: 600;
+}
+
+.invoice-form select,
+.invoice-form input[type="text"] {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.invoice-form input[readonly] {
+  background: #f0f0f0;
+}
+
+.invoice-form .btn-utama {
+  background: #ffe600;
+  color: #333;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.invoice-form .btn-utama:hover {
+  background: #ffdd00;
+}
+
+body.dark-mode {
+  background: #0f172a;
+  color: #f3f4f6;
+}
+
+body.dark-mode .invoice-form {
+  background: #1e293b;
+  color: #f3f4f6;
+}
+
+body.dark-mode .invoice-form input,
+body.dark-mode .invoice-form select {
+  background: #0f172a;
+  color: #f3f4f6;
+  border-color: #334155;
+}
+
+body.dark-mode .invoice-form input[readonly] {
+  background: #1e293b;
+}
+
+body.dark-mode .btn-utama {
+  background: #facc15;
+  color: #111827;
+}

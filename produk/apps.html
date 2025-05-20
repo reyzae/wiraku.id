@@ -3,24 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Langganan Aplikasi - Wiraku.id</title>
+  <title>Produk Aplikasi Premium - Wiraku.id</title>
+  <link rel="icon" href="../favicon.png" />
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <header class="sub-hero">
-    <h1>📦 Langganan Aplikasi</h1>
-    <p>Canva Pro, Adobe, Microsoft 365, dan lainnya</p>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">Wiraku.id</div>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="/">Beranda</a>
+          <a href="/produk/lainnya.html">Lainnya</a>
+          <a href="/panduan/cara-pakai.html">Panduan</a>
+          <a href="/tentang/tentang.html">Tentang</a>
+        </div>
+        <div class="top-dark-toggle toggle-dark">
+          <span id="moon-icon">🌙</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Judul Halaman -->
+  <header class="hero">
+    <h1>Koleksi <span class="highlight">Aplikasi Premium</span></h1>
+    <p>Dapatkan aplikasi terbaik dengan harga terjangkau dan terpercaya.</p>
   </header>
 
-  <section class="produk-list" id="produkApps">
-    <!-- Produk akan dimuat dari JSON -->
+  <!-- Daftar Produk -->
+  <section class="kategori-section">
+    <div id="produkApps" class="kategori-grid">
+      <!-- Produk akan dirender via JS -->
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Wiraku.id - Langganan Aplikasi</p>
+    <p>&copy; 2025 Wiraku.id | Produk digital aman & terpercaya</p>
   </footer>
 
+  <!-- Floating WhatsApp -->
+  <div class="wa-float">
+    <a href="https://wa.me/6285121010199?text=Halo%20saya%20mau%20order%20produk%20digitalnya..." target="_blank" class="wa-button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WA" />
+      <span class="wa-tooltip">Order Sekarang</span>
+    </a>
+  </div>
+
+  <!-- Floating Menu Mobile -->
+  <div class="top-menu-wrapper" id="top-menu-wrapper">
+    <div class="top-dark-toggle toggle-dark">
+      <span id="moon-icon">🌙</span>
+    </div>
+    <div class="top-compass" id="top-compass">🧭</div>
+    <div class="top-dropdown" id="top-dropdown">
+      <a href="/index.html">Beranda</a>
+      <a href="/produk/lainnya.html">Lainnya</a>
+      <a href="/panduan/cara-pakai.html">Panduan</a>
+      <a href="/tentang/tentang.html">Tentang</a>
+    </div>
+  </div>
+
+  <!-- Script -->
   <script src="../assets/js/main.js"></script>
 </body>
 </html>

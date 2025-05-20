@@ -1,33 +1,26 @@
 [
   {
-    "nama": "Top Up OVO/DANA/GoPay",
-    "harga": "Mulai Rp 10.000",
-    "deskripsi": "Kirim saldo langsung ke akun kamu dalam waktu 5 menit.",
-    "status": "aktif",
-    "order": "https://wa.me/62xxxxxx?text=Top%20Up"
+  "nama": "Langganan Scribd Premium",
+  "deskripsi": "Akses ebook, audiobook, dan dokumen premium tanpa batas.",
+  "harga": "Rp15.000/bulan",
+  "order": "https://wa.me/6285121010199?text=Halo%20saya%20mau%20langganan%20Scribd%20Premium"
+  },
+
+  {
+    "nama": "Langganan VPN Premium",
+    "deskripsi": "Akses internet lebih aman & bebas blokir.",
+    "harga": "Rp20.000/bulan",
+    "order": "https://wa.me/6285121010199?text=Saya%20mau%20langganan%20VPN"
   },
   {
-    "nama": "Jasa Remote Install Software",
-    "harga": "Rp 15.000",
-    "deskripsi": "Kami bantu install software via AnyDesk atau TeamViewer.",
-    "status": "aktif",
-    "order": "https://wa.me/62xxxxxx?text=Remote%20Install"
+    "nama": "Premium ChatGPT",
+    "deskripsi": "Dapatkan akses GPT-4 murah dan stabil.",
+    "harga": "Rp15.000/bulan",
+    "order": "https://wa.me/6285121010199?text=Saya%20mau%20langganan%20ChatGPT"
   },
   {
-    "nama": "Paket Creator Starter (Canva + CapCut)",
-    "harga": "Rp 25.000",
-    "deskripsi": "Langganan 2 aplikasi edit populer untuk 1 bulan.",
-    "status": "aktif",
-    "order": "https://wa.me/62xxxxxx?text=Langganan%20Paket%20Creator"
-  },
-  {
-    "nama": "Convert File & Scan PDF",
-    "deskripsi": "Layanan akan tersedia segera. Tetap pantau ya!",
-    "status": "comingsoon"
-  },
-  {
-    "nama": "Pembuatan Akun Luar Negeri",
-    "deskripsi": "Kami bantu buatkan akun ChatGPT, ChatPDF, dsb. Segera hadir!",
+    "nama": "eSIM Internasional",
+    "deskripsi": "eSIM untuk keperluan perjalanan luar negeri.",
     "status": "comingsoon"
   }
 ]

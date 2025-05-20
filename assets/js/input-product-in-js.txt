@@ -1,0 +1,47 @@
+🧠 Cara Menambahkan Produk Baru di Form Invoice (invoice.js)
+
+1. Buka File:
+   /assets/js/invoice.js
+
+2. Tambahkan Produk Baru ke Objek hargaProduk:
+
+   const hargaProduk = {
+     netflix: {
+       "1 Profile": 39000,
+       "2 Profile": 59000,
+       "3 Profile": 79000,
+       "4 Profile": 99000
+     },
+     disney: {
+       "1 Profile": 45000,
+       "2 Profile": 65000
+     },
+     spotify: {
+       "1 Profile": 30000
+     }
+   };
+
+3. Tambahkan Produk ke HTML <select id="produk">:
+
+   <select id="produk" name="produk" required>
+     <option value="" disabled selected>Pilih Produk</option>
+     <option value="netflix">Netflix Premium</option>
+     <option value="disney">Disney+ Premium</option>
+     <option value="spotify">Spotify Premium</option>
+   </select>
+
+4. Selesai!
+
+   Dropdown jumlah akan aktif otomatis dan harga langsung muncul sesuai pilihan.
+
+TIPS:
+- Gunakan nama produk (key) huruf kecil, misalnya: netflix, disney, spotify
+- Gunakan value profile persis seperti: "1 Profile", "2 Profile", dst.
+- Harga otomatis format: Rp xx.xxx (pakai toLocaleString("id-ID"))
+
+Fitur lanjutan (opsional):
+- Diskon otomatis
+- Harga dinamis via API
+- Stok terbatas
+
+Tinggal modifikasi fungsi updateHarga().

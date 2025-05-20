@@ -1,14 +1,32 @@
 [
   {
-    "nama": "Canva Pro 1 Bulan",
-    "harga": "Rp 20.000",
-    "deskripsi": "Akun invite resmi, aktif dalam 5 menit.",
-    "order": "https://wa.me/628XXXXXXXXXX?text=Langganan%20Canva%20Pro%201%20Bulan"
+    "nama": "Canva Pro",
+    "deskripsi": "Desain lebih mudah dengan fitur premium Canva.",
+    "harga": "Rp10.000 / bulan",
+    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20ingin%20order%20Canva%20Pro"
   },
   {
-    "nama": "Microsoft 365 Personal 1 Tahun",
-    "harga": "Rp 120.000",
-    "deskripsi": "Lisensi resmi, bisa install di PC dan HP.",
-    "order": "https://wa.me/628XXXXXXXXXX?text=Langganan%20Microsoft%20365%201%20Tahun"
+    "nama": "CapCut Pro",
+    "deskripsi": "Edit video tanpa watermark dan fitur terbuka penuh.",
+    "harga": "Rp15.000 / bulan",
+    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20ingin%20order%20CapCut%20Pro"
+  },
+  {
+    "nama": "InShot Pro",
+    "deskripsi": "Video editor dengan filter premium dan tanpa iklan.",
+    "harga": "Rp12.000 / bulan",
+    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20ingin%20order%20InShot%20Pro"
+  },
+  {
+    "nama": "Remini Pro",
+    "deskripsi": "Tingkatkan kualitas foto buram jadi HD.",
+    "harga": "Rp10.000 / bulan",
+    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20ingin%20order%20Remini%20Pro"
+  },
+  {
+    "nama": "PicsArt Gold",
+    "deskripsi": "Buka semua tools editing dan efek premium.",
+    "harga": "Rp15.000 / bulan",
+    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20ingin%20order%20PicsArt%20Gold"
   }
 ]

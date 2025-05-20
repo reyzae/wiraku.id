@@ -1,30 +1,100 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Invoice Pembayaran - Wiraku.id</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invoice Pembelian - Wiraku.id</title>
+  <link rel="icon" href="../favicon.png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/invoice.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>Invoice Pemesanan</h1>
-    <p>Silakan transfer ke rekening berikut lalu upload bukti pembayaran</p>
-  </header>
 
-  <main class="invoice-container">
-    <section class="invoice-box">
-      <h2>Detail Pemesanan</h2>
-      <ul>
-        <li><strong>Produk:</strong> Netflix Premium (1 Bulan)</li>
-        <li><strong>Harga:</strong> Rp 25.000</li>
-        <li><strong>Nama Pemesan:</strong> John Doe</li>
-      </ul>
-      <h3>Metode Pembayaran</h3>
-      <p>Transfer ke BCA 123456789 a.n Wiraku Digital</p>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">Wiraku.id</div>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html">Beranda</a>
+          <a href="../produk/lainnya.html">Lainnya</a>
+          <a href="../panduan/cara-pakai.html">Panduan</a>
+          <a href="../tentang/tentang.html">Tentang</a>
+        </div>
+        <div class="top-dark-toggle toggle-dark"><span id="moon-icon">🌙</span></div>
+      </div>
+    </div>
+  </div>
 
-      <a href="/checkout/konfirmasi.html" class="btn-utama">Upload Bukti Pembayaran</a>
-    </section>
-  </main>
+  <!-- Form Pemesanan -->
+  <section class="kategori-section">
+    <h2>Form Pemesanan Produk</h2>
+    <form id="invoiceForm" class="invoice-form">
+      <label for="produk">Nama Produk:</label>
+      <select id="produk" name="produk" required>
+        <option value="" disabled selected>Pilih Produk</option>
+        <option value="netflix">Netflix Premium</option>
+        <!-- Tambahkan produk lain di sini -->
+      </select>
+
+      <label for="jumlah">Jumlah:</label>
+      <select id="jumlah" name="jumlah" required disabled></select>
+
+      <label for="harga">Total Harga:</label>
+      <input type="text" id="harga" name="harga" readonly />
+
+      <label for="metode">Metode Pembayaran:</label>
+      <select id="metode" name="metode" required>
+        <option value="" disabled selected>Pilih Metode</option>
+        <option value="qris">QRIS</option>
+        <option value="bank">Transfer Bank</option>
+        <option value="ewallet">E-Wallet</option>
+      </select>
+
+      <div id="opsi-bank" class="opsi-sub" style="display: none;">
+        <label for="bank">Pilih Bank:</label>
+        <select id="bank" name="bank">
+          <option value="bca">BCA</option>
+          <option value="bri">BRI</option>
+          <option value="bni">BNI</option>
+        </select>
+      </div>
+
+      <div id="opsi-ewallet" class="opsi-sub" style="display: none;">
+        <label for="ewallet">Pilih E-Wallet:</label>
+        <select id="ewallet" name="ewallet">
+          <option value="gopay">GoPay</option>
+          <option value="dana">DANA</option>
+          <option value="ovo">OVO</option>
+          <option value="shopeepay">ShopeePay</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-utama">Konfirmasi Pemesanan</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Wiraku.id | Produk digital aman & terpercaya</p>
+  </footer>
+
+  <!-- Floating Top Menu Mobile -->
+  <div class="top-menu-wrapper" id="top-menu-wrapper">
+    <div class="top-dark-toggle toggle-dark" id="toggle-dark"><span id="moon-icon">🌙</span></div>
+    <div class="top-compass" id="top-compass">🧭</div>
+    <div class="top-dropdown" id="top-dropdown">
+      <a href="../index.html">Beranda</a>
+      <a href="../produk/lainnya.html">Lainnya</a>
+      <a href="../panduan/cara-pakai.html">Panduan</a>
+      <a href="../tentang/tentang.html">Tentang</a>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/invoice.js"></script>
+
 </body>
 </html>

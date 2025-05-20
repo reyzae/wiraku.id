@@ -49,25 +49,26 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!container) return;
 
     fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        container.innerHTML = data.map(p => `
-          <div class="produk-card">
-            <h3>${p.nama}</h3>
-            <p>${p.deskripsi}</p>
-            ${p.status === 'comingsoon'
-              ? '<button class="btn-disabled" disabled>Segera Hadir</button>'
-              : `<strong>${p.harga}</strong><br><a href="${p.order}" class="btn-utama">Order via WA</a>`
-            }
-          </div>
-        `).join('');
-      });
+  .then(res => res.json())
+  .then(data => {
+    container.innerHTML = data.map(p => `
+      <div class="produk-card">
+        <h3>${p.nama}</h3>
+        <p>${p.deskripsi}</p>
+        ${p.status === 'comingsoon'
+          ? '<button class="btn-disabled" disabled>Segera Hadir</button>'
+          : `<strong>${p.harga}</strong><br><a href="${p.order}" class="btn-utama">Order</a>`
+        }
+      </div>
+    `).join('');
+  });
+
   }
 
   renderProduk('produkStreaming', 'data/streaming.json');
   renderProduk('produkGame', 'data/game.json');
   renderProduk('produkApps', 'data/apps.json');
-  renderProduk('produk-lainnya', '/produk/lainnya.json');
+  renderProduk('produkLainnya', './data/lainnya.json');
 
   // ===== Mobile Floating Menu Trigger (jika ada) =====
   const trigger = document.getElementById('menu-trigger');
@@ -77,4 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
     });
   }
+});
+
+
+// ==== Efek Fade-in Body =====
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("fade-in");
 });
