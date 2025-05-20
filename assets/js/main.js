@@ -9,80 +9,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== Toggle Dark Mode (Mobile & Desktop) =====
-  const darkToggles = document.querySelectorAll('.toggle-dark');
-  darkToggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
+  // ===== Toggle Dark Mode (SEMUA tombol, desktop & mobile) =====
+  document.querySelectorAll('.toggle-dark').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
       document.body.classList.toggle('dark-mode');
     });
   });
 
-  // ===== Floating Compass Menu (Mobile Only) =====
-  const compass = document.getElementById('top-compass');
+  // ===== Hamburger Dropdown (Mobile Only) =====
+  const hamburgerMobile = document.getElementById('top-hamburger-mobile');
   const dropdown = document.getElementById('top-dropdown');
-
-  if (compass && dropdown) {
-    compass.addEventListener('click', (e) => {
+  if (hamburgerMobile && dropdown) {
+    hamburgerMobile.addEventListener('click', function(e) {
       e.stopPropagation();
       dropdown.classList.toggle('show');
-      compass.classList.toggle('active');
     });
 
-    document.addEventListener('click', (e) => {
-      if (!dropdown.contains(e.target) && !compass.contains(e.target)) {
+    // Tutup dropdown kalau klik di luar menu
+    document.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target) && !hamburgerMobile.contains(e.target)) {
         dropdown.classList.remove('show');
-        compass.classList.remove('active');
       }
     });
 
+    // Klik menu langsung tutup dropdown
     dropdown.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', function() {
         dropdown.classList.remove('show');
-        compass.classList.remove('active');
       });
     });
   }
 
-  // ===== Render Produk Dinamis dari JSON =====
-  function renderProduk(id, url) {
-    const container = document.getElementById(id);
-    if (!container) return;
-
-    fetch(url)
-  .then(res => res.json())
-  .then(data => {
-    container.innerHTML = data.map(p => `
-      <div class="produk-card">
-        <h3>${p.nama}</h3>
-        <p>${p.deskripsi}</p>
-        ${p.status === 'comingsoon'
-          ? '<button class="btn-disabled" disabled>Segera Hadir</button>'
-          : `<strong>${p.harga}</strong><br><a href="${p.order}" class="btn-utama">Order</a>`
-        }
-      </div>
-    `).join('');
-  });
-
-  }
-
-  renderProduk('produkStreaming', 'data/streaming.json');
-  renderProduk('produkGame', 'data/game.json');
-  renderProduk('produkApps', 'data/apps.json');
-  renderProduk('produkLainnya', './data/lainnya.json');
-
-  // ===== Mobile Floating Menu Trigger (jika ada) =====
-  const trigger = document.getElementById('menu-trigger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  if (trigger && mobileMenu) {
-    trigger.addEventListener('click', () => {
-      mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
-    });
-  }
-});
-
-
-// ==== Efek Fade-in Body =====
-
-document.addEventListener("DOMContentLoaded", () => {
+  // Efek Fade-in
   document.body.classList.add("fade-in");
 });

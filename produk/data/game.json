@@ -3,25 +3,25 @@
     "nama": "Mobile Legends (ML) 86 Diamonds",
     "deskripsi": "Top up ML langsung masuk dalam hitungan detik.",
     "harga": "Rp 24.000",
-    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20mau%20top%20up%20ML%2086%20Diamonds"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
   },
   {
     "nama": "Free Fire 70 Diamonds",
     "deskripsi": "Isi ulang cepat untuk akun Free Fire kamu.",
     "harga": "Rp 11.000",
-    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20mau%20top%20up%20Free%20Fire%2070%20Diamonds"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
   },
   {
     "nama": "PUBG Mobile UC 63",
     "deskripsi": "Top up cepat UC PUBG Mobile.",
     "harga": "Rp 13.000",
-    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20mau%20order%20PUBG%2063%20UC"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
   },
   {
     "nama": "Genshin Impact 60 Crystals",
     "deskripsi": "Top up Genshin cepat via UID.",
     "harga": "Rp 16.000",
-    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20mau%20top%20up%20Genshin%2060%20Crystals"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
   },
   {
     "nama": "Honkai: Star Rail",

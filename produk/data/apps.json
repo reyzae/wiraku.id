@@ -3,30 +3,30 @@
     "nama": "Canva Pro",
     "deskripsi": "Desain lebih mudah dengan fitur premium Canva.",
     "harga": "Rp10.000 / bulan",
-    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20ingin%20order%20Canva%20Pro"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
   },
   {
     "nama": "CapCut Pro",
     "deskripsi": "Edit video tanpa watermark dan fitur terbuka penuh.",
     "harga": "Rp15.000 / bulan",
-    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20ingin%20order%20CapCut%20Pro"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
   },
   {
     "nama": "InShot Pro",
     "deskripsi": "Video editor dengan filter premium dan tanpa iklan.",
     "harga": "Rp12.000 / bulan",
-    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20ingin%20order%20InShot%20Pro"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
   },
   {
     "nama": "Remini Pro",
     "deskripsi": "Tingkatkan kualitas foto buram jadi HD.",
     "harga": "Rp10.000 / bulan",
-    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20ingin%20order%20Remini%20Pro"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
   },
   {
     "nama": "PicsArt Gold",
     "deskripsi": "Buka semua tools editing dan efek premium.",
     "harga": "Rp15.000 / bulan",
-    "order": "https://wa.me/6285121010199?text=Halo,%20saya%20ingin%20order%20PicsArt%20Gold"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
   }
 ]

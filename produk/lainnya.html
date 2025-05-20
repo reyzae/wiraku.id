@@ -6,7 +6,6 @@
   <title>Produk Lainnya - Wiraku.id</title>
   <link rel="icon" href="../favicon.png" />
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -17,20 +16,27 @@
       <div class="nav-right">
         <div class="nav-links">
           <a href="../index.html">Beranda</a>
-          <a href="../produk/lainnya.html" class="active">Lainnya</a>
+          <a href="lainnya.html">Lainnya</a>
           <a href="../panduan/cara-pakai.html">Panduan</a>
           <a href="../tentang/tentang.html">Tentang</a>
         </div>
-        <div class="top-dark-toggle toggle-dark"><span id="moon-icon">🌙</span></div>
+        <div class="top-dark-toggle toggle-dark" id="toggle-dark">
+          <span id="moon-icon">🌙</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Section Produk -->
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Produk Lainnya</h1>
+    <p>Beragam layanan digital lainnya yang bermanfaat dan terjangkau.</p>
+  </header>
+
+  <!-- Produk Section -->
   <section class="kategori-section">
-    <h2>Produk Lainnya</h2>
     <div class="kategori-grid" id="produkLainnya">
-      <!-- Data dari ../data/lainnya.json akan dirender via JS -->
+      <!-- Produk dari lainnya.json akan dirender di sini -->
     </div>
   </section>
 
@@ -39,26 +45,47 @@
     <p>&copy; 2025 Wiraku.id | Produk digital aman & terpercaya</p>
   </footer>
 
-  <!-- Floating WhatsApp -->
+  <!-- WA Float -->
   <div class="wa-float">
-    <a href="https://wa.me/6285121010199?text=Halo%20saya%20mau%20order%20produk%20lainnya" target="_blank" class="wa-button">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
+    <a href="https://wa.me/6285121010199?text=Halo%20saya%20mau%20order%20produk%20lainnya" target="_blank" class="wa-button" title="Order Sekarang">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WA Icon" />
       <span class="wa-tooltip">Order Sekarang</span>
     </a>
   </div>
 
-  <!-- Top Menu Wrapper (Mobile) -->
+  <!-- Floating Menu Mobile -->
   <div class="top-menu-wrapper" id="top-menu-wrapper">
-    <div class="top-dark-toggle toggle-dark"><span id="moon-icon">🌙</span></div>
+    <div class="top-dark-toggle toggle-dark">
+      <span id="moon-icon">🌙</span>
+    </div>
     <div class="top-compass" id="top-compass">🧭</div>
     <div class="top-dropdown" id="top-dropdown">
       <a href="../index.html">Beranda</a>
-      <a href="../produk/lainnya.html" class="active">Lainnya</a>
+      <a href="lainnya.html">Lainnya</a>
       <a href="../panduan/cara-pakai.html">Panduan</a>
       <a href="../tentang/tentang.html">Tentang</a>
     </div>
   </div>
 
-  <script src="../assets/js/main.js"></script>
+  <!-- Script -->
+  <script src="./assets/js/main.js"></script>
+  <script>
+    // Load produk lainnya dari JSON
+    fetch('./data/lainnya.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('produkLainnya');
+        container.innerHTML = data.map(p => `
+          <div class="produk-card">
+            <h3>${p.nama}</h3>
+            <p>${p.deskripsi}</p>
+            ${p.status === 'comingsoon'
+              ? '<button class="btn-disabled" disabled>Segera Hadir</button>'
+              : `<strong>${p.harga}</strong><br><a href="${p.order}" class="btn-utama">Order</a>`
+            }
+          </div>
+        `).join('');
+      });
+  </script>
 </body>
 </html>

@@ -1,8 +1,9 @@
-/* ========== RESET & DASAR ========== */
+/* ============================================================= */
+/* ========== RESET & DASAR ==================================== */
+/* ============================================================= */
 * {
-  transition: background 0.4s ease, color 0.4s ease, border-color 0.3s ease, filter 0.3s ease;
+  transition: background 0.4s, color 0.4s, border-color 0.3s, filter 0.3s;
 }
-
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -10,33 +11,13 @@ body {
   background: #f4f7fa;
   color: #333;
   line-height: 1.6;
-  transition: background 0.5s ease-in-out, color 0.3s ease;
 }
+a { text-decoration: none; }
+img { max-width: 100%; display: block; }
 
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Tambahan: Sembunyikan kompas di desktop */
-@media (min-width: 769px) {
-  #top-menu-wrapper {
-    display: none !important;
-  }
-
-  .top-dark-toggle {
-    position: relative;
-    top: unset;
-    right: unset;
-  }
-}
-
-/* ========== NAVBAR ========== */
+/* ============================================================= */
+/* ========== NAVBAR =========================================== */
+/* ============================================================= */
 .navbar {
   background: #111827;
   padding: 15px 0;
@@ -46,21 +27,18 @@ img {
   top: 0;
   z-index: 10;
 }
-
 .navbar a {
   color: #F3F4F6;
   margin: 0 15px;
   font-size: 16px;
   font-weight: 500;
   border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
-
 .navbar a:hover {
   color: #38BDF8;
   border-bottom: 2px solid #38BDF8;
 }
-
 .nav-brand {
   font-family: 'Poppins', 'Segoe UI', sans-serif;
   font-size: 20px;
@@ -68,7 +46,6 @@ img {
   color: #ffe600;
   margin-left: 20px;
 }
-
 .nav-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -77,35 +54,27 @@ img {
   align-items: center;
   padding: 0 20px;
 }
-
-/* Tambahan: Grup kanan navbar */
 .nav-right {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
 .nav-links {
   display: flex;
   gap: 15px;
 }
 
-/* ========== HERO ========== */
+/* ============================================================= */
+/* ========== HERO SECTION ===================================== */
+/* ============================================================= */
 .hero {
   background: linear-gradient(165deg, #1e3a8a, #0f172a);
   color: white;
   padding: 70px 20px 50px;
   text-align: center;
 }
-
-.hero h1 {
-  margin-bottom: 10px;
-}
-
-.highlight {
-  color: #ffe600;
-}
-
+.hero h1 { margin-bottom: 10px; }
+.highlight { color: #ffe600; }
 .btn-utama {
   background: #ffe600;
   color: #333;
@@ -114,20 +83,21 @@ img {
   font-weight: bold;
   display: inline-block;
   margin-top: 20px;
+  transition: all 0.3s;
 }
 
-/* ========== KATEGORI ========== */
+/* ============================================================= */
+/* ========== KATEGORI PRODUK ================================== */
+/* ============================================================= */
 .kategori-section {
   padding: 50px 20px;
   text-align: center;
   background-color: #ffffff;
 }
-
 .kategori-section h2 {
   margin-bottom: 20px;
   font-size: 22px;
 }
-
 .kategori-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -136,7 +106,6 @@ img {
   max-width: 800px;
   margin: 0 auto;
 }
-
 .kategori-card {
   background: #fff;
   border: 1px solid #ddd;
@@ -147,63 +116,43 @@ img {
   font-weight: 600;
   color: #333;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .kategori-card span {
   display: block;
   margin-top: 8px;
   color: #005eff;
 }
-
 .kategori-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* ========== CTA WhatsApp ========== */
-.cta-wa,
-.cta-wa-unik {
-  background: #e3f9e5;
-  padding: 30px;
-  text-align: center;
-}
-
-.cta-box {
-  max-width: 600px;
-  margin: 0 auto;
+/* ========== Produk Card ========== */
+.produk-card {
   background: #fff;
-  border-left: 6px solid #25d366;
-  border-radius: 8px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: all 0.3s;
+}
+.produk-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+.produk-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.produk-card p { font-size: 0.9rem; color: #555; margin-bottom: 1rem; }
+.produk-card strong {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #111;
 }
 
-.cta-box img {
-  width: 50px;
-  height: 50px;
-}
-
-.btn-wa,
-.btn-wa-unik {
-  background: #25d366;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 6px;
-  display: inline-block;
-  font-weight: bold;
-  transition: background 0.3s ease;
-  text-decoration: none;
-}
-
-.btn-wa-unik:hover {
-  background: #1da851;
-}
-
-/* ========== FOOTER ========== */
+/* ============================================================= */
+/* ========== FOOTER =========================================== */
+/* ============================================================= */
 .footer {
   background: #1e2a38;
   color: white;
@@ -212,31 +161,27 @@ img {
   font-size: 14px;
 }
 
-/* ========== WHATSAPP FLOAT ========== */
+/* ============================================================= */
+/* ========== WHATSAPP FLOAT BUTTON ============================ */
+/* ============================================================= */
 .wa-float {
   position: fixed;
   bottom: 25px;
   right: 25px;
   z-index: 999;
 }
-
 .wa-button {
   position: relative;
   display: inline-block;
 }
-
 .wa-button img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
 }
-
-.wa-button:hover img {
-  transform: scale(1.05);
-}
-
+.wa-button:hover img { transform: scale(1.05); }
 .wa-tooltip {
   position: absolute;
   bottom: 75px;
@@ -249,118 +194,113 @@ img {
   white-space: nowrap;
   opacity: 0;
   transform: translateY(10px);
-  transition: all 0.3s ease;
+  transition: all 0.3s;
   pointer-events: none;
 }
-
 .wa-button:hover .wa-tooltip {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ========== MOBILE MENU ========== */
-.mobile-menu-trigger {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background-color: #111827;
-  color: #ffe600;
-  font-size: 26px;
-  padding: 10px 14px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 999;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.mobile-menu-trigger:hover {
-  transform: scale(1.1) rotate(10deg);
-}
-
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  position: fixed;
-  bottom: 80px;
-  left: 20px;
-  background: #1f2937;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-  z-index: 998;
-  animation: slideUp 0.3s ease-out;
-}
-
-.mobile-menu a {
-  color: white;
-  margin: 8px 0;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 768px) {
-  .mobile-menu-trigger { display: block; }
-  .navbar .nav-links { display: none !important; }
-}
-
-/* ========== FLOATING COMPASS & DROPDOWN ========== */
+/* ============================================================= */
+/* ========== TOP MENU MOBILE (HAMBURGER & DARK MODE) ========== */
+/* ============================================================= */
 .top-menu-wrapper {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 9999; /* naikkan agar selalu di atas */
   display: flex;
   align-items: center;
   gap: 10px;
-  pointer-events: auto; /* penting */
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
 }
 
-.top-compass,
+/* ---------- Hamburger Button ---------- */
+.top-hamburger,
+#top-hamburger,
+#top-hamburger-mobile {
+  background: #111827;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffe600; /* Kuning */
+  font-size: 2.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hamburger warna saat dark mode */
+body.dark-mode .top-hamburger,
+body.dark-mode #top-hamburger,
+body.dark-mode #top-hamburger-mobile {
+  background: #232b33;
+  color: #fff;  /* Putih di dark mode */
+}
+
+/* Hamburger warna saat light mode */
+body:not(.dark-mode) .top-hamburger,
+body:not(.dark-mode) #top-hamburger,
+body:not(.dark-mode) #top-hamburger-mobile {
+  background: #111827;
+  color: #ffe600;
+}
+
+/* ---------- Toggle Dark Mode Button ---------- */
 .top-dark-toggle {
-  z-index: 9999; /* pastikan keduanya di atas */
-  pointer-events: auto;
+  background: #111827;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-mode .top-dark-toggle {
+  background: #232b33;
 }
 
-.top-compass.active {
-  animation: none;
+/* Ikon bulan (🌙) di toggle */
+#moon-icon,
+#moon-icon-desktop,
+#moon-icon-mobile {
+  font-size: 22px;
+  color: #ffe600 !important; /* Kuning di light mode */
+  transition: color 0.3s;
+}
+body.dark-mode #moon-icon,
+body.dark-mode #moon-icon-desktop,
+body.dark-mode #moon-icon-mobile {
+  color: #fff !important;     /* Putih di dark mode */
 }
 
-@media (min-width: 769px) {
-  #top-menu-wrapper {
-    display: none !important;
-  }
-}
-
-@keyframes rotate-compass {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
+/* ============================================================= */
+/* ========== DROPDOWN MENU (HAMBURGER) ======================== */
+/* ============================================================= */
 .top-dropdown {
   position: absolute;
-  top: 60px;
+  top: 54px;
   right: 0;
   flex-direction: column;
   background: #1f2937;
-  padding: 12px;
-  border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-  min-width: 140px;
+  padding: 16px 0;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  min-width: 165px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   pointer-events: none;
   display: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
-
 .top-dropdown.show {
   display: flex;
   opacity: 1;
@@ -368,440 +308,114 @@ img {
   transform: translateY(0);
   pointer-events: auto;
 }
-
 .top-dropdown a {
   color: #fff;
-  padding: 8px 12px;
-  font-weight: 500;
+  padding: 14px 22px;
+  font-weight: 600;
   text-decoration: none;
   transition: 0.2s;
+  text-align: left;
+  font-size: 18px;
 }
-
 .top-dropdown a:hover {
   color: #ffe600;
+  background: rgba(255,230,0,0.05);
+  border-radius: 8px;
 }
 
-/* ========== DARK MODE ========= */
+/* ============================================================= */
+/* ========== RESPONSIVE MENU ================================== */
+/* ============================================================= */
+@media (max-width: 768px) {
+  .nav-right { display: none !important; }
+  #top-menu-wrapper { display: flex !important; }
+}
+@media (min-width: 769px) {
+  #top-menu-wrapper { display: none !important; }
+}
 
+/* ============================================================= */
+/* ========== DARK MODE (OVERRIDE) ============================= */
+/* ============================================================= */
 body.dark-mode {
-  background: #0f172a;
-  color: #f3f4f6;
+  background: #000 !important;   /* Full black background */
+  color: #fff !important;
 }
 
 /* Navbar */
 body.dark-mode .navbar {
-  background: #0c1a2b;
+  background: #000 !important;
+  color: #fff;
+}
+body.dark-mode .nav-links a {
+  color: #fff !important;
+}
+body.dark-mode .nav-brand {
+  color: #ffffff !important;
 }
 
-body.dark-mode .navbar a {
-  color: #e5e7eb;
-}
-
-body.dark-mode .navbar a:hover {
-  color: #38bdf8;
-  border-color: #38bdf8;
-}
-
-/* Hero */
+/* Hero/Header Section */
 body.dark-mode .hero {
-  background: linear-gradient(165deg, #0f172a, #1e3a8a);
-  color: #f3f4f6;
+  background: #232d43 !important;
+  color: #fff;
+}
+body.dark-mode .highlight {
+  color: #ffffff;
 }
 
 /* Tombol utama */
-/* === DARK MODE: Tombol Utama === */
 body.dark-mode .btn-utama {
-  background: #000000;         /* hitam total */
-  color: #ffffff;              /* teks putih */
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+body.dark-mode .btn-utama:hover {
+  background: #fff;
+  color: #000;
   border: 2px solid #ffffff;
 }
 
-/* === DARK MODE: Section Kategori === */
+/* Kategori & Card */
 body.dark-mode .kategori-section {
-  background-color: #000000;
+  background: #000 !important;
+  color: #fff;
 }
-
-body.dark-mode .kategori-section h2 {
-  color: #ffffff;
-}
-
-/* Kartu Produk */
 body.dark-mode .kategori-card {
-  background: #111827;         /* dark navy */
-  color: #ffffff;              /* default text */
-  border-color: #1f2937;       /* border gelap */
-  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05); /* soft white shadow */
+  background: #232b33 !important;    /* Card dark blue/grey */
+  color: #4fc3f7 !important;         /* Biru muda */
+  border: 1px solid #222;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.24);
+  transition: background 0.2s, color 0.2s;
 }
-
-/* Teks Judul Produk */
 body.dark-mode .kategori-card span {
-  color: #ffffff;              /* biru terang */
+  color: #4fc3f7 !important;         /* Biru muda */
+}
+body.dark-mode .kategori-card:hover {
+  background: #10141a !important;
+  color: #fff !important;
 }
 
-
-
-
-/* Footer */
-body.dark-mode .footer {
-  background: #0c1a2b;
-  color: #cbd5e1;
-}
-
-/* WhatsApp CTA */
-body.dark-mode .cta-wa,
-body.dark-mode .cta-wa-unik {
-  background: #1e293b;
-  color: #f3f4f6;
-}
-
-body.dark-mode .cta-box {
-  background: #0f172a;
-  border-left: 6px solid #25d366;
-  color: #f3f4f6;
-}
-
-body.dark-mode .btn-wa,
-body.dark-mode .btn-wa-unik {
-  background: #25d366;
-  color: white;
-}
-
-body.dark-mode .btn-wa-unik:hover {
-  background: #1da851;
-}
-
-/* WA Button */
-body.dark-mode .wa-button img {
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-}
-
-/* Dropdown Menu */
-body.dark-mode .top-dropdown {
-  background: #0f172a;
-  color: #f3f4f6;
-}
-
-body.dark-mode .top-dropdown a {
+/* Produk Card di Dark Mode */
+body.dark-mode .produk-card {
+  background: #1f2937;
   color: #e5e7eb;
 }
+body.dark-mode .produk-card h3 { color: #f3f4f6; }
+body.dark-mode .produk-card p { color: #cbd5e1; }
+body.dark-mode .produk-card strong { color: #fff; }
 
-body.dark-mode .top-dropdown a:hover {
-  color: #ffe600;
-}
-
-/* Moon Icon */
-body:not(.dark-mode) #moon-icon {
-  color: #000;
-}
-
-body.dark-mode #moon-icon {
-  color: #fff;
-}
-
-/* DARK MODE FINAL */
-body.dark-mode {
-  background: #0b1120;
-  color: #e2e8f0;
-}
-
-body.dark-mode .navbar {
-  background: #090f1d;
-}
-
-body.dark-mode .hero {
-  background: linear-gradient(160deg, #0f172a, #1a2238);
-  color: #e2e8f0;
-}
-
-body.dark-mode .kategori-section {
-  background: #0e1729;
-}
-
-body.dark-mode .kategori-section h2 {
-  color: #e2e8f0;
-}
-
-body.dark-mode .kategori-card {
-  background: #1a2238;
-  color: #e2e8f0;
-  border-color: #2d3748;
-}
-
-body.dark-mode .kategori-card span {
-  color: #ffffff;
-}
-
-body.dark-mode .btn-utama {
-  background: #facc15;
-  color: #111827;
-}
-
-body.dark-mode .cta-wa,
-body.dark-mode .cta-wa-unik {
-  background: #1a2238;
-  color: #e2e8f0;
-}
-
-body.dark-mode .cta-box {
-  background: #0b1120;
-  border-left: 6px solid #25d366;
-  color: #e2e8f0;
-}
-
+/* Footer di Dark Mode */
 body.dark-mode .footer {
-  background: #0c1a2b;
-  color: #cbd5e1;
-}
-
-body.dark-mode .top-dropdown {
-  background: #1a2238;
-}
-
-body.dark-mode .top-dropdown a {
-  color: #f1f5f9;
-}
-
-
-/* ================= DARK MODE CUSTOM ================= */
-
-body.dark-mode {
-  background: #0f172a;
-  color: #e2e8f0;
-}
-
-/* NAVBAR */
-body.dark-mode .navbar {
-  background: #000;
-}
-
-body.dark-mode .nav-brand {
-  color: #fff; /* Wiraku.id jadi putih */
-}
-
-body.dark-mode .navbar a {
-  color: #e5e5e5;
-}
-
-body.dark-mode .navbar a:hover {
-  color: #ffe600;
-  border-bottom: 2px solid #ffe600;
-}
-
-/* HERO */
-body.dark-mode .hero {
-  background: linear-gradient(160deg, #0f172a, #1e3a8a);
-  color: #e2e8f0;
-}
-
-body.dark-mode .hero .highlight {
-  color: #fff; /* Wiraku.id (span) putih */
-}
-
-body.dark-mode .btn-utama {
-  background: #1e293b;
+  background: #000 !important;
   color: #fff;
-  border: 2px solid #ffffff;
+  border-top: 1px solid #232b33;
 }
 
-body.dark-mode .btn-utama:hover {
-  background: #334155;
-  color: #ffffff;
-}
-
-/* KATEGORI */
-body.dark-mode .kategori-section {
-  background: #111827;
-}
-
-body.dark-mode .kategori-card {
-  background: #1e293b;
-  border: 1px solid #334155;
-  color: #e2e8f0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-body.dark-mode .kategori-card span {
-  color: #93c5fd;
-}
-
-/* DROPDOWN & COMPASS */
-body.dark-mode .top-dropdown {
-  background: #111;
-}
-
-body.dark-mode .top-dropdown a {
-  color: #eee;
-}
-
-body.dark-mode .top-dropdown a:hover {
-  color: #ffe600;
-}
-
-/* FOOTER */
-body.dark-mode .footer {
-  background: #0f172a;
-  color: #94a3b8;
-}
-
-/* ICON BULAN & KOMPAS */
-body.dark-mode #moon-icon,
-body.dark-mode .top-compass {
-  filter: invert(1); /* Membalik warna emoji/icon agar putih */
-}
-
-
-/* ===== Compass Floating Style (dipindah dari index.html) ===== */
-.top-compass {
-  font-size: 24px;
-  width: 50px;
-  height: 50px;
-  background: #111827;
-  color: #ffe600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  animation: rotate-compass 4s linear infinite;
-  transition: transform 0.2s ease;
-}
-
-.top-compass.active {
-  animation: none;
-}
-
-@keyframes rotate-compass {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.top-dropdown {
-  position: absolute;
-  top: 60px;
-  right: 0;
-  flex-direction: column;
-  background: #1f2937;
-  padding: 12px;
-  border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-  min-width: 140px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-  pointer-events: none;
-  display: none;
-}
-
-.top-dropdown.show {
-  display: flex;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.top-dropdown a {
-  color: #fff;
-  padding: 8px 12px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.2s;
-}
-
-.top-dropdown a:hover {
-  color: #ffe600;
-}
-
-/* ===== Toggle Dark Mode Button ===== */
-.top-dark-toggle {
-  width: 40px;
-  height: 40px;
-  background: #111827;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-#moon-icon {
-  font-size: 20px;
-  transition: color 0.3s ease;
-}
-
-body:not(.dark-mode) #moon-icon {
-  color: #000;
-}
-
-body.dark-mode #moon-icon {
-  color: #fff;
-}
-
-/* --- Responsive Top Menu (Mobile Only) --- */
-.top-menu-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 999;
-}
-
-.top-compass,
-.top-dark-toggle {
-  width: 50px;
-  height: 50px;
-  background: #111827;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.top-compass {
-  font-size: 24px;
-  color: #ffe600;
-  animation: rotate-compass 4s linear infinite;
-  transition: transform 0.2s ease;
-}
-
-.top-compass.active {
-  animation: none;
-}
-
-.top-dark-toggle #moon-icon {
-  font-size: 24px;
-  color: #ffe600;
-}
-
-/* Sembunyikan top menu di desktop */
-@media (min-width: 769px) {
-  #top-menu-wrapper {
-    display: none !important;
-  }
-}
-
-/* Sembunyikan navbar-right dark toggle di mobile */
-@media (max-width: 768px) {
-  .nav-right {
-    display: none !important;
-  }
-}
-
-/* Animasi masuk saat halaman dimuat */
+/* ============================================================= */
+/* ========== ANIMASI FADE IN ================================== */
+/* ============================================================= */
 .fade-in {
   opacity: 0;
   animation: fadeInEffect 0.5s ease-in forwards;
 }
-
-@keyframes fadeInEffect {
-  to {
-    opacity: 1;
-  }
-}
+@keyframes fadeInEffect { to { opacity: 1; } }

@@ -9,18 +9,18 @@
     "nama": "Spotify Premium Individual",
     "deskripsi": "Akun Spotify resmi, masa aktif 1 bulan.",
     "harga": "Rp 25.000",
-    "order": "checkout/invoice.html?produk=spotify&jumlah=1%20Bulan"
+    "order": "../checkout/invoice.html?produk=spotify&jumlah=1%20Bulan"
   },
   {
     "nama": "YouTube Premium (Family)",
     "deskripsi": "Bergabung ke akun keluarga YouTube Premium.",
     "harga": "Rp 15.000",
-    "order": "checkout/invoice.html?produk=youtube&jumlah=1%20Bulan"
+    "order": "../checkout/invoice.html?produk=youtube&jumlah=1%20Bulan"
   },
   {
     "nama": "Disney+ Hotstar",
     "deskripsi": "Langganan 30 hari untuk Disney+ Hotstar.",
     "harga": "Rp 35.000",
-    "order": "checkout/invoice.html?produk=disney&jumlah=1%20Bulan"
+    "order": "../checkout/invoice.html?produk=disney&jumlah=1%20Bulan"
   }
 ]

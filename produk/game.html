@@ -1,27 +1,91 @@
-<!-- produk/game.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Voucher Game - Wiraku.id</title>
+  <link rel="icon" href="../favicon.png" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
 
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">Wiraku.id</div>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../index.html">Beranda</a>
+          <a href="lainnya.html">Lainnya</a>
+          <a href="../panduan/cara-pakai.html">Panduan</a>
+          <a href="../tentang/tentang.html">Tentang</a>
+        </div>
+        <div class="top-dark-toggle toggle-dark" id="toggle-dark">
+          <span id="moon-icon">🌙</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Hero -->
   <header class="hero">
-    <h1>Kategori <span class="highlight">Voucher Game</span></h1>
+    <h1>Kategori <span style="color: #FFD700">Voucher Game</span></h1>
     <p>Top up cepat dan aman untuk semua game populer favoritmu.</p>
   </header>
 
+  <!-- Produk Grid -->
   <section class="kategori-section">
-    <div id="produkGame" class="kategori-grid"></div>
+    <div class="kategori-grid" id="produkGame">
+      <!-- Produk akan dirender dari JSON -->
+    </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Wiraku.id | Produk digital aman & terpercaya</p>
   </footer>
 
-  <script src="../assets/js/main.js"></script>
+  <!-- WA Float -->
+  <div class="wa-float">
+    <a href="https://wa.me/6285121010199?text=Halo%20saya%20mau%20order%20voucher%20game" target="_blank" class="wa-button" title="Order Sekarang">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WA Icon" />
+      <span class="wa-tooltip">Order Sekarang</span>
+    </a>
+  </div>
+
+  <!-- Floating Menu Mobile -->
+  <div class="top-menu-wrapper" id="top-menu-wrapper">
+    <div class="top-dark-toggle toggle-dark">
+      <span id="moon-icon">🌙</span>
+    </div>
+    <div class="top-compass" id="top-compass">🧭</div>
+    <div class="top-dropdown" id="top-dropdown">
+      <a href="../index.html">Beranda</a>
+      <a href="lainnya.html">Lainnya</a>
+      <a href="../panduan/cara-pakai.html">Panduan</a>
+      <a href="../tentang/tentang.html">Tentang</a>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="./assets/js/main.js"></script>
+  <script>
+    // Load JSON Produk Game
+    fetch('./data/game.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('produkGame');
+        container.innerHTML = data.map(p => `
+          <div class="produk-card">
+            <h3>${p.nama}</h3>
+            <p>${p.deskripsi}</p>
+            ${p.status === 'comingsoon'
+              ? '<button class="btn-disabled" disabled>Segera Hadir</button>'
+              : `<strong>${p.harga}</strong><br><a href="${p.order}" class="btn-utama">Order</a>`
+            }
+          </div>
+        `).join('');
+      });
+  </script>
 </body>
 </html>
