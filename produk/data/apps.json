@@ -2,31 +2,31 @@
   {
     "nama": "Canva Pro",
     "deskripsi": "Desain lebih mudah dengan fitur premium Canva.",
-    "harga": "Rp10.000 / bulan",
-    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
+    "status":"comingsoon"
   },
   {
     "nama": "CapCut Pro",
     "deskripsi": "Edit video tanpa watermark dan fitur terbuka penuh.",
-    "harga": "Rp15.000 / bulan",
-    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
+    "status": "comingsoon"
   },
   {
     "nama": "InShot Pro",
     "deskripsi": "Video editor dengan filter premium dan tanpa iklan.",
-    "harga": "Rp12.000 / bulan",
-    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
+    "status": "comingsoon"
   },
   {
     "nama": "Remini Pro",
     "deskripsi": "Tingkatkan kualitas foto buram jadi HD.",
-    "harga": "Rp10.000 / bulan",
-    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
+    "status":"comingsoon"
   },
   {
     "nama": "PicsArt Gold",
     "deskripsi": "Buka semua tools editing dan efek premium.",
-    "harga": "Rp15.000 / bulan",
-    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
+    "status": "comingsoon"
   }
 ]

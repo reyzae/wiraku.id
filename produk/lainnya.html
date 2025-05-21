@@ -27,6 +27,21 @@
     </div>
   </div>
 
+  <!-- Compass + Toggle Mobile -->
+  <div class="top-menu-wrapper" id="top-menu-wrapper">
+  <div class="top-dark-toggle toggle-dark" id="toggle-dark-mobile">
+    <span id="moon-icon-mobile">🌙</span>
+  </div>
+  <div class="top-hamburger" id="top-hamburger-mobile">&#9776;</div>
+  <div class="top-dropdown" id="top-dropdown">
+    <a href="../index.html">Beranda</a>
+    <a href="lainnya.html">Lainnya</a>
+    <a href="../panduan/cara-pakai.html">Panduan</a>
+    <a href="../tentang/tentang.html">Tentang</a>
+  </div>
+  </div>
+
+
   <!-- Hero Section -->
   <header class="hero">
     <h1>Produk Lainnya</h1>
@@ -53,39 +68,8 @@
     </a>
   </div>
 
-  <!-- Floating Menu Mobile -->
-  <div class="top-menu-wrapper" id="top-menu-wrapper">
-    <div class="top-dark-toggle toggle-dark">
-      <span id="moon-icon">🌙</span>
-    </div>
-    <div class="top-compass" id="top-compass">🧭</div>
-    <div class="top-dropdown" id="top-dropdown">
-      <a href="../index.html">Beranda</a>
-      <a href="lainnya.html">Lainnya</a>
-      <a href="../panduan/cara-pakai.html">Panduan</a>
-      <a href="../tentang/tentang.html">Tentang</a>
-    </div>
-  </div>
+   <!-- Script -->
+  <script src="../assets/js/main.js"></script>
 
-  <!-- Script -->
-  <script src="./assets/js/main.js"></script>
-  <script>
-    // Load produk lainnya dari JSON
-    fetch('./data/lainnya.json')
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('produkLainnya');
-        container.innerHTML = data.map(p => `
-          <div class="produk-card">
-            <h3>${p.nama}</h3>
-            <p>${p.deskripsi}</p>
-            ${p.status === 'comingsoon'
-              ? '<button class="btn-disabled" disabled>Segera Hadir</button>'
-              : `<strong>${p.harga}</strong><br><a href="${p.order}" class="btn-utama">Order</a>`
-            }
-          </div>
-        `).join('');
-      });
-  </script>
 </body>
 </html>

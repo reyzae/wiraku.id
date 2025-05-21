@@ -2,25 +2,26 @@
   {
   "nama": "Langganan Scribd Premium",
   "deskripsi": "Akses ebook, audiobook, dan dokumen premium tanpa batas.",
-  "harga": "Rp15.000/bulan",
-  "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
+  "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
+  "status": "comingsoon"
   },
 
   {
     "nama": "Langganan VPN Premium",
     "deskripsi": "Akses internet lebih aman & bebas blokir.",
-    "harga": "Rp20.000/bulan",
-    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
+    "status": "comingsoon"
   },
   {
     "nama": "Premium ChatGPT",
     "deskripsi": "Dapatkan akses GPT-4 murah dan stabil.",
-    "harga": "Rp15.000/bulan",
-    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
+    "status": "comingsoon"
   },
   {
     "nama": "eSIM Internasional",
     "deskripsi": "eSIM untuk keperluan perjalanan luar negeri.",
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
     "status": "comingsoon"
   }
 ]

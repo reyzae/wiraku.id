@@ -2,30 +2,31 @@
   {
     "nama": "Mobile Legends (ML) 86 Diamonds",
     "deskripsi": "Top up ML langsung masuk dalam hitungan detik.",
-    "harga": "Rp 24.000",
-    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
+    "status": "comingsoon"
   },
   {
     "nama": "Free Fire 70 Diamonds",
     "deskripsi": "Isi ulang cepat untuk akun Free Fire kamu.",
-    "harga": "Rp 11.000",
-    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
+    "status": "comingsoon"    
   },
   {
     "nama": "PUBG Mobile UC 63",
     "deskripsi": "Top up cepat UC PUBG Mobile.",
-    "harga": "Rp 13.000",
-    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
+    "status": "comingsoon"  
   },
   {
     "nama": "Genshin Impact 60 Crystals",
     "deskripsi": "Top up Genshin cepat via UID.",
-    "harga": "Rp 16.000",
-    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
+    "status": "comingsoon"
   },
   {
     "nama": "Honkai: Star Rail",
     "deskripsi": "Produk top up HSR akan segera hadir.",
+    "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile",
     "status": "comingsoon"
   }
 ]
