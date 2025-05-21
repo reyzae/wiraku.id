@@ -110,17 +110,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Toggle Dark Mode (SEMUA tombol, desktop & mobile)
-  document.querySelectorAll('.toggle-dark').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      document.body.classList.toggle('dark-mode');
-      updateDarkToggleIcon();
-    });
-  });
+// ========== Toggle Dark Mode dengan localStorage ==========
 
-  // Set icon dark mode saat halaman dimuat
-  updateDarkToggleIcon();
+const DARK_KEY = 'wiraku_darkmode';
+
+// 1. Saat load halaman, cek localStorage dulu
+if (localStorage.getItem(DARK_KEY) === '1') {
+  document.body.classList.add('dark-mode');
+} else {
+  document.body.classList.remove('dark-mode');
+}
+
+// 2. Event untuk SEMUA toggle dark mode button
+document.querySelectorAll('.toggle-dark').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    document.body.classList.toggle('dark-mode');
+    // Simpan ke localStorage
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem(DARK_KEY, '1');
+    } else {
+      localStorage.removeItem(DARK_KEY);
+    }
+    updateDarkToggleIcon();
+  });
+});
+
+// 3. Set icon dark mode saat halaman dimuat
+updateDarkToggleIcon();
+
 
   // Hamburger Dropdown (Mobile Only)
   const hamburgerMobile = document.getElementById('top-hamburger-mobile');
@@ -158,3 +176,5 @@ function updateDarkToggleIcon() {
     el.textContent = isDark ? '🌙' : '☀️';
   });
 }
+
+

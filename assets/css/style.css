@@ -1,6 +1,6 @@
-/* ============================================================= */
-/* ========== RESET & DASAR ==================================== */
-/* ============================================================= */
+/* =============================================================
+   RESET & DASAR (Global Reset & Base)
+============================================================= */
 * {
   transition: background 0.4s, color 0.4s, border-color 0.3s, filter 0.3s;
 }
@@ -15,9 +15,9 @@ body {
 a { text-decoration: none; }
 img { max-width: 100%; display: block; }
 
-/* ============================================================= */
-/* ========== NAVBAR =========================================== */
-/* ============================================================= */
+/* =============================================================
+   NAVBAR (Navigasi Atas)
+============================================================= */
 .navbar {
   background: #111827;
   padding: 15px 0;
@@ -64,25 +64,21 @@ img { max-width: 100%; display: block; }
   gap: 15px;
 }
 
-/* ============================================================= */
-/* ========== HERO SECTION ===================================== */
-/* ============================================================= */
+/* =============================================================
+   HERO SECTION (Header Selamat Datang)
+============================================================= */
 .hero {
   background: linear-gradient(165deg, #1e3a8a, #0f172a);
   color: white;
   padding: 70px 20px 50px;
   text-align: center;
 }
+.hero h1 { margin-bottom: 10px; }
+.highlight { color: #ffe600; }
 
-.hero h1 { 
-  margin-bottom: 10px; 
-}
-
-.highlight { 
-  color: #ffe600; 
-}
-
-/* Tombol utama di hero section */
+/* =============================================================
+   TOMBOL UTAMA (Order/Action)
+============================================================= */
 .btn-utama {
   background: #ffe600;
   color: #333;
@@ -97,25 +93,14 @@ img { max-width: 100%; display: block; }
   text-align: center;
   cursor: pointer;
   transition: all 0.25s;
-  min-width: 220px;
-  max-width: 90vw;
+  /* width/padding untuk produk tombol diatur di .btn-produk */
 }
 .hero .btn-utama {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
 }
-.btn-utama, .hero .btn-utama {
-  width: auto !important;
-}
-@media (max-width: 600px) {
-  .btn-utama {
-    padding: 13px 32px;
-    font-size: 1.05rem;
-    min-width: 150px;
-    max-width: 95vw;
-  }
-}
+.btn-utama, .hero .btn-utama { width: auto !important; }
 
 .btn-utama:hover {
   box-shadow: 0 4px 18px rgba(0,0,0,0.13);
@@ -123,14 +108,58 @@ img { max-width: 100%; display: block; }
   opacity: 0.93;
 }
 
+/* =============================================================
+   TOMBOL KHUSUS PRODUK CARD (Order/Segera Hadir)
+   Agar lebar tombol konsisten & responsif
+============================================================= */
+.btn-produk {
+  width: 90%;
+  min-width: 140px;
+  max-width: 100%;
+  margin: 18px auto 0 auto;
+  display: block;
+  padding: 16px 0;
+  font-size: 1.22rem;
+  font-weight: bold;
+  border-radius: 12px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+@media (max-width: 600px) {
+  .btn-produk {
+    width: 100%;
+    min-width: 0;
+    font-size: 1rem;
+    padding: 14px 0;
+    border-radius: 10px;
+  }
+}
 
-/* ============================================================= */
-/* ========== KATEGORI PRODUK ================================== */
-/* ============================================================= */
+/* Tombol Segera Hadir */
+.btn-disabled {
+  background: #bbb !important;
+  color: #fff !important;
+  border: none !important;
+  cursor: not-allowed !important;
+  font-weight: bold;
+  opacity: 1;
+  pointer-events: none;
+  /* Lebar & padding diatur di .btn-produk */
+}
+
+/* =============================================================
+   KATEGORI PRODUK (Grid Card Kategori)
+============================================================= */
 .kategori-section {
   padding: 50px 20px;
   text-align: center;
   background-color: #ffffff;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .kategori-section h2 {
   margin-bottom: 20px;
@@ -138,7 +167,7 @@ img { max-width: 100%; display: block; }
 }
 .kategori-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Sedikit lebar minimal card */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
   padding: 30px 0;
   max-width: 900px;
@@ -198,9 +227,9 @@ img { max-width: 100%; display: block; }
   }
 }
 
-
-
-/* ========== Produk Card ========== */
+/* =============================================================
+   PRODUK CARD (Setiap Produk di Grid)
+============================================================= */
 .produk-card {
   background: #fff;
   border-radius: 12px;
@@ -222,29 +251,16 @@ img { max-width: 100%; display: block; }
   color: #111;
 }
 
-
-/* Produk yang sedang tidak tersedia */
+/* Produk yang tidak tersedia */
 .produk-disabled {
   opacity: 0.6;
   filter: grayscale(1);
   pointer-events: none;
 }
-.btn-disabled {
-  background: #bbb !important;
-  color: #fff !important;
-  border: none !important;
-  cursor: not-allowed !important;
-  font-weight: bold;
-  padding: 10px 24px;
-  border-radius: 6px;
-  margin-top: 10px;
-}
 
-
-
-/* ============================================================= */
-/* ========== FOOTER =========================================== */
-/* ============================================================= */
+/* =============================================================
+   FOOTER
+============================================================= */
 .footer {
   background: #1e2a38;
   color: white;
@@ -253,9 +269,9 @@ img { max-width: 100%; display: block; }
   font-size: 14px;
 }
 
-/* ============================================================= */
-/* ========== WHATSAPP FLOAT BUTTON ============================ */
-/* ============================================================= */
+/* =============================================================
+   WHATSAPP FLOAT BUTTON
+============================================================= */
 .wa-float {
   position: fixed;
   bottom: 25px;
@@ -294,9 +310,9 @@ img { max-width: 100%; display: block; }
   transform: translateY(0);
 }
 
-/* ============================================================= */
-/* ========== TOP MENU MOBILE (HAMBURGER & DARK MODE) ========== */
-/* ============================================================= */
+/* =============================================================
+   TOP MENU MOBILE (Hamburger & Dark Mode)
+============================================================= */
 .top-menu-wrapper {
   display: flex;
   align-items: center;
@@ -306,11 +322,8 @@ img { max-width: 100%; display: block; }
   right: 15px;
   z-index: 9999;
 }
-
-/* ---------- Hamburger Button ---------- */
-.top-hamburger,
-#top-hamburger,
-#top-hamburger-mobile {
+/* Hamburger Button */
+.top-hamburger, #top-hamburger, #top-hamburger-mobile {
   background: #111827;
   border-radius: 50%;
   width: 44px;
@@ -318,21 +331,19 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffe600; /* Kuning */
+  color: #ffe600;
   font-size: 2.2rem;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: background 0.3s, color 0.3s;
 }
-
 /* Hamburger warna saat dark mode */
 body.dark-mode .top-hamburger,
 body.dark-mode #top-hamburger,
 body.dark-mode #top-hamburger-mobile {
   background: #232b33;
-  color: #fff;  /* Putih di dark mode */
+  color: #fff;
 }
-
 /* Hamburger warna saat light mode */
 body:not(.dark-mode) .top-hamburger,
 body:not(.dark-mode) #top-hamburger,
@@ -340,8 +351,7 @@ body:not(.dark-mode) #top-hamburger-mobile {
   background: #111827;
   color: #ffe600;
 }
-
-/* ---------- Toggle Dark Mode Button ---------- */
+/* Toggle Dark Mode Button */
 .top-dark-toggle {
   background: #111827;
   border-radius: 50%;
@@ -358,32 +368,24 @@ body:not(.dark-mode) #top-hamburger-mobile {
 body.dark-mode .top-dark-toggle {
   background: #232b33;
 }
-
-/* Ikon bulan (🌙) di toggle */
-#moon-icon,
-#moon-icon-desktop,
-#moon-icon-mobile {
+#moon-icon, #moon-icon-desktop, #moon-icon-mobile {
   font-size: 22px;
   transition: color 0.3s;
 }
-
 body.dark-mode #moon-icon,
 body.dark-mode #moon-icon-desktop,
 body.dark-mode #moon-icon-mobile {
   color: #fff;
 }
-
 body:not(.dark-mode) #moon-icon,
 body:not(.dark-mode) #moon-icon-desktop,
 body:not(.dark-mode) #moon-icon-mobile {
   color: #FFD600;
 }
 
-
-
-/* ============================================================= */
-/* ========== DROPDOWN MENU (HAMBURGER) ======================== */
-/* ============================================================= */
+/* =============================================================
+   DROPDOWN MENU (Hamburger Menu Mobile)
+============================================================= */
 .top-dropdown {
   position: absolute;
   top: 54px;
@@ -423,9 +425,9 @@ body:not(.dark-mode) #moon-icon-mobile {
   border-radius: 8px;
 }
 
-/* ============================================================= */
-/* ========== RESPONSIVE MENU MOBILE MODE================================== */
-/* ============================================================= */
+/* =============================================================
+   RESPONSIVE MENU MOBILE (Navbar/Dropdown)
+============================================================= */
 @media (max-width: 768px) {
   .nav-right { display: none !important; }
   #top-menu-wrapper { display: flex !important; }
@@ -434,14 +436,13 @@ body:not(.dark-mode) #moon-icon-mobile {
   #top-menu-wrapper { display: none !important; }
 }
 
-/* ============================================================= */
-/* ========== DARK MODE (OVERRIDE) ============================= */
-/* ============================================================= */
+/* =============================================================
+   DARK MODE (Override, semua elemen)
+============================================================= */
 body.dark-mode {
-  background: #000 !important;   /* Full black background */
+  background: #000 !important;
   color: #fff !important;
 }
-
 /* Navbar */
 body.dark-mode .navbar {
   background: #000 !important;
@@ -453,7 +454,6 @@ body.dark-mode .nav-links a {
 body.dark-mode .nav-brand {
   color: #ffffff !important;
 }
-
 /* Hero/Header Section */
 body.dark-mode .hero {
   background: #232d43 !important;
@@ -462,7 +462,6 @@ body.dark-mode .hero {
 body.dark-mode .highlight {
   color: #ffffff;
 }
-
 /* Tombol utama */
 body.dark-mode .btn-utama {
   background: transparent;
@@ -474,55 +473,7 @@ body.dark-mode .btn-utama:hover {
   color: #000;
   border: 2px solid #ffffff;
 }
-
 /* Kategori & Card */
-body.dark-mode .kategori-section {
-  background: #000 !important;
-  color: #fff;
-}
-body.dark-mode .kategori-card {
-  background: #232b33 !important;    /* Card dark blue/grey */
-  color: #4fc3f7 !important;         /* Biru muda */
-  border: 1px solid #222;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.24);
-  transition: background 0.2s, color 0.2s;
-}
-body.dark-mode .kategori-card span {
-  color: #4fc3f7 !important;         /* Biru muda */
-}
-body.dark-mode .kategori-card:hover {
-  background: #10141a !important;
-  color: #fff !important;
-}
-
-/* Produk Card di Dark Mode */
-body.dark-mode .produk-card {
-  background: #1f2937;
-  color: #e5e7eb;
-}
-body.dark-mode .produk-card h3 { color: #f3f4f6; }
-body.dark-mode .produk-card p { color: #cbd5e1; }
-body.dark-mode .produk-card strong { color: #fff; }
-
-/* Footer di Dark Mode */
-body.dark-mode .footer {
-  background: #000 !important;
-  color: #fff;
-  border-top: 1px solid #232b33;
-}
-
-/* ============================================================= */
-/* ========== ANIMASI FADE IN ================================== */
-/* ============================================================= */
-.fade-in {
-  opacity: 0;
-  animation: fadeInEffect 0.5s ease-in forwards;
-}
-@keyframes fadeInEffect { to { opacity: 1; } }
-
-
-
-/* Section utama beda warna saat dark mode (cara-pakai.html)*/
 body.dark-mode .kategori-section {
   background: #181e28 !important;
   color: #fff !important;
@@ -532,56 +483,124 @@ body.dark-mode .kategori-section {
   max-width: 900px;
   padding: 48px 28px;
 }
-
-/* Judul, list, dan isi tetap putih */
-body.dark-mode .kategori-section h2,
-body.dark-mode .kategori-section li,
-body.dark-mode .kategori-section strong {
+body.dark-mode .kategori-card {
+  background: #232b33 !important;
+  color: #4fc3f7 !important;
+  border: 1px solid #222;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.24);
+  transition: background 0.2s, color 0.2s;
+}
+body.dark-mode .kategori-card span {
+  color: #4fc3f7 !important;
+}
+body.dark-mode .kategori-card:hover {
+  background: #10141a !important;
+  color: #fff !important;
+}
+/* Produk Card di Dark Mode */
+body.dark-mode .produk-card {
+  background: #1f2937;
+  color: #e5e7eb;
+}
+body.dark-mode .produk-card h3 { color: #f3f4f6; }
+body.dark-mode .produk-card p { color: #cbd5e1; }
+body.dark-mode .produk-card strong { color: #fff; }
+/* Footer di Dark Mode */
+body.dark-mode .footer {
+  background: #000 !important;
+  color: #fff;
+  border-top: 1px solid #232b33;
+}
+/* Tombol di produk card dark mode */
+body.dark-mode .btn-produk {
+  border: 2px solid #fff !important;
+}
+body.dark-mode .btn-disabled {
+  background: #555 !important;
   color: #fff !important;
 }
 
-
-/* Light mode: kuning */
-.btn-utama {
-  background: #ffe600;
-  color: #333;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 20px;
-  transition: all 0.3s;
-  border: none;
-  width: 100%;
+/* =============================================================
+   ANIMASI FADE IN (Halaman)
+============================================================= */
+.fade-in {
+  opacity: 0;
+  animation: fadeInEffect 0.5s ease-in forwards;
 }
+@keyframes fadeInEffect { to { opacity: 1; } }
 
-/* Dark mode: putih */
-body.dark-mode .btn-utama {
-  background: #fff !important;
-  color: #222 !important;
-  border: none;
+/* =============================================================
+   KHUSUS PANDUAN DAN TENTANG (cara-pakai.html & tentang.html)
+============================================================= */
+.panduan-section, .tentang-section {
+  max-width: 900px;
+  margin: 48px auto 0 auto;
+  padding: 40px 16px 44px 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.06);
 }
-
-body.dark-mode .btn-utama:hover {
-  background: #ffe600 !important;
-  color: #111 !important;
+.panduan-title, .tentang-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #212121;
 }
-
-
-/* ============================================================= */
-/* ========== INVOICE CSS ================================== */
-/* ============================================================= */
-
-
-
-.kategori-section {
-  min-height: 80vh;
+.panduan-list-wrapper, .tentang-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.15rem;
+  color: #222;
+  line-height: 1.7;
+}
+.panduan-list, .tentang-list {
+  font-size: 1.12rem;
+  padding-left: 0;
+  list-style: none;
+}
+.panduan-list li, .tentang-list li {
+  margin-bottom: 12px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
+.tentang-list .checkmark {
+  margin-right: 10px;
+  font-size: 1.1em;
+  color: #23ba45;
+}
+body.dark-mode .tentang-section,
+body.dark-mode .tentang-content,
+body.dark-mode .tentang-title,
+body.dark-mode .tentang-list,
+body.dark-mode .tentang-list li {
+  color: #fff !important;
+  background: #1a1f27 !important;
+}
+body.dark-mode .tentang-section { box-shadow: 0 2px 18px rgba(0,0,0,0.3); }
+body.dark-mode .tentang-list li .checkmark { color: #41f36b; }
 
+@media (max-width: 600px) {
+  .panduan-section, .tentang-section {
+    padding: 20px 6px 28px 6px;
+    margin-top: 16px;
+  }
+  .panduan-title, .tentang-title {
+    font-size: 1.23rem;
+    margin-bottom: 15px;
+  }
+  .panduan-list-wrapper, .tentang-content {
+    font-size: 1rem;
+  }
+  .panduan-list, .tentang-list {
+    font-size: 0.98rem;
+  }
+}
+
+/* =============================================================
+   INVOICE (Form di invoice.html)
+============================================================= */
 .invoice-form {
   background: #fff;
   border-radius: 18px;
@@ -594,7 +613,6 @@ body.dark-mode .btn-utama:hover {
   flex-direction: column;
   gap: 22px;
 }
-
 .invoice-form label {
   font-weight: 500;
   color: #2b2d2f;
@@ -602,7 +620,6 @@ body.dark-mode .btn-utama:hover {
   margin-top: 6px;
   display: block;
 }
-
 .invoice-form select,
 .invoice-form input[type="text"],
 .invoice-form input[type="number"] {
@@ -615,39 +632,15 @@ body.dark-mode .btn-utama:hover {
   margin-bottom: 4px;
   transition: border 0.2s;
 }
-
 .invoice-form select:focus,
 .invoice-form input:focus {
   outline: none;
   border-color: #ffe600;
 }
-
 .invoice-form input[readonly] {
   background: #eee;
   color: #6b7280;
 }
-
-.btn-utama {
-  background: #ffe600;
-  color: #222;
-  padding: 16px 0;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 8px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  width: 100%;
-  transition: background 0.3s, color 0.3s;
-}
-.btn-utama:hover,
-.btn-utama:focus {
-  background: #ffd600;
-  color: #111;
-}
-
-/* Responsive di HP */
 @media (max-width: 600px) {
   .invoice-form {
     padding: 18px 8px 20px 8px;

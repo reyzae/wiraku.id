@@ -3,72 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tentang Wiraku.id</title>
+  <title>Tentang Wiku.id</title>
   <link rel="icon" href="../favicon.png" />
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body class="fade-in">
 
-  <!-- Navbar -->
+  <!-- Navbar (Desktop Only) -->
   <div class="navbar">
     <div class="nav-container">
-      <div class="nav-brand">Wiraku.id</div>
+      <div class="nav-brand">Wiku.id</div>
       <div class="nav-right">
         <div class="nav-links">
           <a href="../index.html">Beranda</a>
           <a href="../produk/lainnya.html">Lainnya</a>
           <a href="../panduan/cara-pakai.html">Panduan</a>
-          <a href="#">Tentang</a>
+          <a href="#" class="active">Tentang</a>
         </div>
-        <div class="top-dark-toggle toggle-dark"><span id="moon-icon">🌙</span></div>
+        <!-- Toggle Dark Mode Desktop -->
+        <div class="top-dark-toggle toggle-dark" id="toggle-dark-desktop">
+          <span id="moon-icon-desktop">🌙</span>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- Top Floating Menu (Mobile Only) -->
+  <div class="top-menu-wrapper" id="top-menu-wrapper">
+    <div class="top-dark-toggle toggle-dark" id="toggle-dark-mobile">
+      <span id="moon-icon-mobile">🌙</span>
+    </div>
+    <div class="top-hamburger" id="top-hamburger-mobile">&#9776;</div>
+    <div class="top-dropdown" id="top-dropdown">
+      <a href="../index.html">Beranda</a>
+      <a href="../produk/lainnya.html">Lainnya</a>
+      <a href="../panduan/cara-pakai.html">Panduan</a>
+      <a href="#" class="active">Tentang</a>
+    </div>
+  </div>
+
   <!-- Tentang Kami -->
-  <section class="kategori-section">
-    <h2>Tentang Kami</h2>
-    <div style="max-width: 800px; margin: 0 auto; text-align: left;">
-      <p><strong>Wiraku.id</strong> adalah platform penjualan produk digital terpercaya yang menyediakan berbagai jenis akun streaming, voucher game, dan langganan aplikasi premium dengan harga terjangkau.</p>
-
+  <section class="kategori-section tentang-section">
+    <h2 class="tentang-title">Tentang Kami</h2>
+    <div class="tentang-content">
+      <p><strong>Wiku.id</strong> adalah platform penjualan produk digital terpercaya yang menyediakan berbagai jenis akun streaming, voucher game, dan langganan aplikasi premium dengan harga terjangkau.</p>
       <p>Kami hadir untuk memenuhi kebutuhan hiburan dan produktivitas digital masyarakat Indonesia secara mudah, cepat, dan aman. Dengan dukungan layanan pelanggan melalui WhatsApp, kami memastikan setiap transaksi berjalan lancar dan responsif.</p>
-
       <p><strong>Misi kami:</strong> Memberikan akses cepat dan terpercaya ke produk digital berkualitas.</p>
-
       <p><strong>Kenapa memilih kami?</strong></p>
-      <ul>
-        <li>✅ Transaksi cepat & otomatis</li>
-        <li>✅ Harga bersahabat</li>
-        <li>✅ Dukungan pelanggan 24 jam</li>
-        <li>✅ Aman dan terpercaya</li>
+      <ul class="tentang-list">
+        <li><span class="checkmark">✅</span> Transaksi cepat & otomatis</li>
+        <li><span class="checkmark">✅</span> Harga bersahabat</li>
+        <li><span class="checkmark">✅</span> Dukungan pelanggan 24 jam</li>
+        <li><span class="checkmark">✅</span> Aman dan terpercaya</li>
       </ul>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Wiraku.id | Produk digital aman & terpercaya</p>
+    <p>&copy; 2025 Wiku.id | Produk digital aman & terpercaya</p>
   </footer>
 
-  <!-- WhatsApp Button -->
+  <!-- Floating WhatsApp Button -->
   <div class="wa-float">
-    <a href="https://wa.me/6285121010199?text=Halo%20saya%20mau%20tanya%20tentang%20Wiraku.id" target="_blank" class="wa-button">
+    <a href="https://wa.me/6285121010199?text=Halo%20saya%20mau%20tanya%20tentang%20Wiku.id"
+       target="_blank" class="wa-button" title="Hubungi Admin">
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="Kontak Admin" />
       <span class="wa-tooltip">Hubungi Admin</span>
     </a>
-  </div>
-
-  <!-- Top Menu (Mobile) -->
-  <div class="top-menu-wrapper" id="top-menu-wrapper">
-    <div class="top-dark-toggle toggle-dark"><span id="moon-icon">🌙</span></div>
-    <div class="top-compass" id="top-compass">🧭</div>
-    <div class="top-dropdown" id="top-dropdown">
-      <a href="../index.html">Beranda</a>
-      <a href="../produk/lainnya.html">Lainnya</a>
-      <a href="../panduan/cara-pakai.html">Panduan</a>
-      <a href="#">Tentang</a>
-    </div>
   </div>
 
   <script src="../assets/js/main.js"></script>
