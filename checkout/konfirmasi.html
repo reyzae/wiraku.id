@@ -7,10 +7,10 @@
   <link rel="icon" href="../favicon.png" />
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/invoice.css" />
+  <link rel="stylesheet" href="../assets/css/konfirmasi.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
-
   <!-- Navbar -->
   <div class="navbar">
     <div class="nav-container">
@@ -22,47 +22,19 @@
           <a href="../panduan/cara-pakai.html">Panduan</a>
           <a href="../tentang/tentang.html">Tentang</a>
         </div>
-        <div class="top-dark-toggle toggle-dark"><span id="moon-icon">🌙</span></div>
+        <div class="top-dark-toggle toggle-dark" id="toggle-dark">
+          <span id="moon-icon-desktop">🌙</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Section Konfirmasi -->
-  <section class="kategori-section">
-    <h2>Konfirmasi Pemesanan</h2>
-    <form id="konfirmasiForm" class="invoice-form">
-      <label for="produk">Nama Produk:</label>
-      <input type="text" id="produk" name="produk" readonly />
-
-      <label for="jumlah">Jumlah:</label>
-      <input type="text" id="jumlah" name="jumlah" readonly />
-
-      <label for="harga">Total Harga:</label>
-      <input type="text" id="harga" name="harga" readonly />
-
-      <label for="metode">Metode Pembayaran:</label>
-      <input type="text" id="metode" name="metode" readonly />
-
-      <div id="opsi-bank" class="opsi-sub" style="display: none;">
-        <label for="bank">Bank:</label>
-        <input type="text" id="bank" name="bank" readonly />
-      </div>
-
-      <div id="opsi-ewallet" class="opsi-sub" style="display: none;">
-        <label for="ewallet">E-Wallet:</label>
-        <input type="text" id="ewallet" name="ewallet" readonly />
-      </div>
-
-      <div style="text-align:center; margin-top: 20px;">
-        <a id="whatsapp-link" class="btn-utama" href="#" target="_blank">Order Sekarang</a>
-      </div>
-    </form>
-  </section>
-
-  <!-- Floating Top Menu Mobile -->
+  <!-- Top Menu Mobile Only -->
   <div class="top-menu-wrapper" id="top-menu-wrapper">
-    <div class="top-dark-toggle toggle-dark" id="toggle-dark"><span id="moon-icon">🌙</span></div>
-    <div class="top-compass" id="top-compass">🧭</div>
+    <div class="top-dark-toggle toggle-dark" id="toggle-dark-mobile">
+      <span id="moon-icon-mobile">🌙</span>
+    </div>
+    <div class="top-hamburger" id="top-hamburger-mobile">&#9776;</div>
     <div class="top-dropdown" id="top-dropdown">
       <a href="../index.html">Beranda</a>
       <a href="../produk/lainnya.html">Lainnya</a>
@@ -71,55 +43,46 @@
     </div>
   </div>
 
+  <!-- Section Konfirmasi -->
+  <section class="kategori-section">
+    <h2>Konfirmasi Pemesanan</h2>
+   <form id="konfirmasiForm" class="invoice-form" autocomplete="off">
+  <label for="produk">Nama Produk:</label>
+  <input type="text" id="produk" name="produk" readonly />
+
+  <label for="jumlah">Jumlah:</label>
+  <input type="text" id="jumlah" name="jumlah" readonly />
+
+  <label for="harga">Total Harga:</label>
+  <input type="text" id="harga" name="harga" readonly />
+
+  <label for="metode">Metode Pembayaran:</label>
+  <input type="text" id="metode" name="metode" readonly />
+
+  <div id="opsi-bank" class="opsi-sub" style="display: none;">
+    <label for="bank">Bank:</label>
+    <input type="text" id="bank" name="bank" readonly />
+  </div>
+
+  <div id="opsi-ewallet" class="opsi-sub" style="display: none;">
+    <label for="ewallet">E-Wallet:</label>
+    <input type="text" id="ewallet" name="ewallet" readonly />
+  </div>
+
+  <div style="text-align:center;">
+    <a id="whatsapp-link" class="btn-utama" href="#" target="_blank">Order Sekarang</a>
+  </div>
+</form>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Wiku.id | Produk digital aman & terpercaya</p>
+  </footer>
+
   <!-- Script -->
   <script src="../assets/js/main.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const params = new URLSearchParams(window.location.search);
-      const produk = params.get("produk");
-      const jumlah = params.get("jumlah");
-      const harga = params.get("harga");
-      const metode = params.get("metode");
-      const bank = params.get("bank");
-      const ewallet = params.get("ewallet");
-
-      // Mapping label produk
-      const produkLabel = {
-        netflix: "Netflix Premium",
-        disney: "Disney+ Premium",
-        spotify: "Spotify Premium"
-      };
-
-      // Tampilkan isi form
-      document.getElementById("produk").value = produkLabel[produk] || produk;
-      document.getElementById("jumlah").value = jumlah;
-      document.getElementById("harga").value = harga;
-      document.getElementById("metode").value = metode ? metode.toUpperCase() : "";
-
-      // Jika metode transfer bank
-      if (metode === "bank") {
-        document.getElementById("opsi-bank").style.display = "block";
-        document.getElementById("bank").value = bank;
-      }
-
-      // Jika metode e-wallet
-      if (metode === "ewallet") {
-        document.getElementById("opsi-ewallet").style.display = "block";
-        document.getElementById("ewallet").value = ewallet;
-      }
-
-      // Buat teks WhatsApp otomatis
-      const pesan = `Halo admin, saya ingin melakukan pemesanan:\n
-Produk: ${produkLabel[produk] || produk}
-Jumlah: ${jumlah}
-Harga: ${harga}
-Metode Pembayaran: ${metode ? metode.toUpperCase() : ""}
-${bank ? "Bank: " + bank : ""}
-${ewallet ? "E-Wallet: " + ewallet : ""}`;
-
-      const whatsappLink = `https://wa.me/6285121010199?text=${encodeURIComponent(pesan)}`;
-      document.getElementById("whatsapp-link").href = whatsappLink;
-    });
-  </script>
+  <script src="../assets/js/konfirmasi.js"></script>
 </body>
 </html>

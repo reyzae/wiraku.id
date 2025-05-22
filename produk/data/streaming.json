@@ -1,7 +1,7 @@
 [
   {
-    "nama": "Netflix 1 Layar (30 Hari)",
-    "deskripsi": "Akun Netflix 1 layar, masa aktif 30 hari.",
+    "nama": "Netflix Premium",
+    "deskripsi": "Akun Netflix 1 Profile, Bisa untuk HP/Laptop/TV masa aktif 30 hari.",
     "harga": "Rp 39.000",
     "order": "../checkout/invoice.html?produk=netflix&jumlah=1%20Profile"
   },
